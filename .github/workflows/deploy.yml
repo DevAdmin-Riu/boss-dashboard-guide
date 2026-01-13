@@ -1,9 +1,9 @@
 name: Deploy Docusaurus to GitHub Pages
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,10 +16,13 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,6 +42,7 @@ jobs:
           path: build
 
   deploy:
+    if: ${{ github.event.pull_request.merged == true }}
     needs: build
     runs-on: ubuntu-latest
     environment:
