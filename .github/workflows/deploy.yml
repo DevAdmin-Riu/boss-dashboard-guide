@@ -21,8 +21,6 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
-        with:
-          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
