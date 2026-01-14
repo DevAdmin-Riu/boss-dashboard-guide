@@ -1,47 +1,29 @@
 ---
 sidebar_position: 1
+title: 이용 전 필독
+slug: /intro
 ---
 
-# Tutorial Intro
+# 이용 전 필독
 
-Let's discover **Docusaurus in less than 5 minutes**.
+이 문서는 **포장보스 어드민 서비스**를 관리자가 더 빠르고 쉽게 사용할 수 있도록, 메뉴별 기능과 사용 흐름을 정리한 이용 가이드입니다.  
+좌측 메뉴(또는 상단 메뉴)에서 원하는 기능을 선택해 해당 페이지의 안내를 확인하세요.
 
-## Getting Started
+---
 
-Get started by **creating a new site**.
+## ⚠️ 유의사항
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+> 해당 가이드는 AI에 의해 생성된 가이드입니다. 오차나 잘못된 부분이 있을 수 있으므로 실제 화면과 대조하여 확인하시기 바랍니다.
 
-### What you'll need
+아래와 같은 경우에는 반드시 실제 화면/운영 정책을 우선으로 확인해주세요.
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- **버튼명/화면 구성 변경**: 서비스 업데이트로 인해 화면 텍스트나 위치가 일부 달라질 수 있습니다.
+- **데이터 변경/삭제 관련 작업**: 되돌리기 어려운 작업은 실행 전 한 번 더 확인해주세요.
+- **상태값/필터 조건**: 특정 상태나 조건에서만 가능한 작업이 있을 수 있습니다.
 
-## Generate a new site
+---
 
-Generate a new Docusaurus site using the **classic template**.
+## 도움이 필요할 때
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- 화면이 가이드와 다르거나 기능이 보이지 않는다면 **권한/정책** 또는 **최신 배포 내용**을 먼저 확인해주세요.
+- 가이드의 오류를 발견하면 관련 페이지 경로와 함께 IT팀에 공유해주시면 개선에 반영할 수 있습니다.

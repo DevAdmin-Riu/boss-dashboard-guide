@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "포장보스 관리자 이용 가이드",
-  tagline: "Dinosaurs are cool",
+  title: "이용 가이드",
+  // tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -44,8 +44,8 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: false,
         theme: {
@@ -62,7 +62,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "포장보스 관리자 이용 가이드",
+      title: "포장보스 어드민 이용 가이드(관리자용)",
       logo: {
         alt: "포장보스 로고",
         src: "img/boss-logo.png",
