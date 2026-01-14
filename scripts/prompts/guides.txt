@@ -1,9 +1,8 @@
 역할: 너는 “문서 전용 Docusaurus 저장소”에서 사용자 이용 가이드를 자동 생성하는 도우미야.
 
 목표:
-- 저장소 루트 기준 ./scripts/generated/repomix-outputs 내의 be.xml, fe-dashboard.xml 파일을 기반으로,
-- 이 저장소의 루트 기준 `./generated/routes.json`의 각 path를 기준으로,
-- pathname 구조와 동일한 디렉터리/마크다운 파일을 `docs/` 아래에 생성해.
+- 저장소 루트 기준 ./generated/repomix-outputs 내의 be.xml, fe-dashboard.xml 파일을 기반으로 가이드를 생성하는데,
+- 저장소의 루트 기준 `./generated/routes.json`의 각 path를 기준으로 pathname 구조와 동일한 디렉터리/마크다운 파일을 `docs/` 아래에 생성해.
 - 생성된 문서들은 Docusaurus에서 그대로 URL로 접근 가능해야 해.
 
 중요 원칙(추측 금지):
@@ -34,7 +33,7 @@
 - 기능/필드/버튼명이 코드에서 확인되면 그대로 쓰고, 확인 불가면 일반적인 표현으로 작성(“검색 버튼”, “저장”, “필터” 등)
 
 근거 활용(권장):
-- 저장소 루트 기준 ./scripts/generated/repomix-outputs/에서 해당 페이지와 연관된 파일(라우트 컴포넌트, 페이지 컴포넌트, API 호출, GraphQL 쿼리 등)을 찾아
+- 저장소 루트 기준 ./generated/repomix-outputs/에서 해당 페이지와 연관된 파일(라우트 컴포넌트, 페이지 컴포넌트, API 호출, GraphQL 쿼리 등)을 찾아
   - 화면에서 제공하는 기능(조회/등록/수정/삭제/필터/엑셀다운로드 등)을 “근거가 있을 때만” 포함
 - 근거가 부족하면 최소한의 일반 가이드 템플릿으로 생성하되, 과장하지 말 것.
 
@@ -47,7 +46,7 @@
 2) 각 route에 대해:
    - 매핑 규칙으로 docs 경로 생성
    - index.md 생성/덮어쓰기
-3) 완료 후 생성된 파일 목록을 `generated/guides.generated.json`에 기록하라.
+3) 완료 후 생성된 파일 목록을 `generated/guides-generated.json`에 기록해.
 
 generated/guides.generated.json 형식:
 {

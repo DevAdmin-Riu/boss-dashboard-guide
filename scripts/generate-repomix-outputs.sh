@@ -4,7 +4,7 @@
 BE_DIR="../saleor-boss/saleor"
 # FE_MALL_DIR="../saleor-boss/saleor-storefront"
 FE_DASHBOARD_DIR="../saleor-boss/saleor-dashboard"
-REPOMIX_OUTPUT_DIR="./scripts/repomix-outputs"
+REPOMIX_OUTPUT_DIR="./generated/repomix-outputs"
 
 echo "백엔드 추출 중..."
 npx repomix $BE_DIR --output $REPOMIX_OUTPUT_DIR/be.xml --include "saleor/**/*,requirements.txt" --ignore "**/migrations/**,**/core/firebase/**,**/settings.py"

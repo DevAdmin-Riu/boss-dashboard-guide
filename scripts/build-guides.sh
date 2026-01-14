@@ -3,7 +3,7 @@
 # 변수 설정
 START=$(date +%s)
 PROMPT_FILE="./scripts/prompts/guides.txt"
-CODEX_INPUT_DIR="./scripts"
+CODEX_INPUT_DIR="."
 CODEX_OUTPUT_DIR="./docs"
 
 # 2. 가이드 생성 단계 (Codex 스크립트 호출)

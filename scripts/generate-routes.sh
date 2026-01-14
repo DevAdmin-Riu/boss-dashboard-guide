@@ -3,8 +3,8 @@
 # 변수 설정
 START=$(date +%s)
 PROMPT_FILE="./scripts/prompts/routes.txt"
-CODEX_INPUT_DIR="./scripts"
-CODEX_OUTPUT_DIR="./scripts/generated"
+CODEX_INPUT_DIR="."
+CODEX_OUTPUT_DIR="./generated"
 
 # 2. 가이드 생성 단계 (Codex 스크립트 호출)
 echo ">>> routes.json 파일 생성 시작..."
