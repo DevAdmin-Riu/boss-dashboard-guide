@@ -10,7 +10,10 @@ echo "백엔드 추출 중..."
 npx repomix $BE_DIR --output $REPOMIX_OUTPUT_DIR/be.xml --include "saleor/**/*,requirements.txt" --ignore "**/migrations/**,**/core/firebase/**,**/settings.py"
 
 # echo "프론트엔드 - 보스몰 추출 중..."
-# npx repomix $FE_MALL_DIR --output $REPOMIX_OUTPUT_DIR/fe-mall.xml --include "src/**/*,package.json" --ignore "**/gqlTypes/**,**/types/**,**/*.css,**/*.scss"
+# npx repomix $FE_MALL_DIR --output $REPOMIX_OUTPUT_DIR/fe-mall.xml --include "src/**/*,package.json" --ignore "**/gqlTypes/**,**/types/**,**/*.css,**/*.scss,src/global/assets/images"
+
+echo "프론트엔드 - 대시보드 URL 부분만 추출 중..."
+npx repomix $FE_DASHBOARD_DIR --output $REPOMIX_OUTPUT_DIR/fe-dashboard-urls.xml --include "src/app/components/AppLayout/menuStructureStaff.ts,**/urls.ts,src/global/assets/constants,src/global/assets/messages,src/global/core"
 
 echo "프론트엔드 - 대시보드 추출 중..."
-npx repomix $FE_DASHBOARD_DIR --output $REPOMIX_OUTPUT_DIR/fe-dashboard.xml --include "src/**/*,package.json" --ignore "**/gqlTypes/**,**/types/**,**/*.css,**/*.scss"
+npx repomix $FE_DASHBOARD_DIR --output $REPOMIX_OUTPUT_DIR/fe-dashboard.xml --include "src/**/*,package.json" --ignore "**/gqlTypes/**,**/types/**,**/*.css,**/*.scss,src/global/assets/favicons,src/global/assets/icons,src/global/assets/images"

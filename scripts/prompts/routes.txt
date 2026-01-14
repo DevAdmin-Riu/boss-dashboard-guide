@@ -1,54 +1,46 @@
-역할: 너는 “문서 전용 Docusaurus 저장소”에서, 실제 서비스(프론트/백) 코드를 기반으로 사용자 가이드 사이트를 자동 생성하는 도우미야.
+=== 목표 ===
+- 저장소 루트 기준 `./generated/repomix-outputs/fe-dashboard-urls.xml`의 코드 패킹 결과를 분석해서,
+- 관리자 기준(isStaff=true) 서비스의 메뉴/페이지 경로(pathname) 목록을 정리한 `routes.json` 파일을 생성해줘.
 
-목표:
-- 이 저장소 루트 기준 `./generated/repomix-outputs/fe-dashboard.xml`의 코드 패킹 결과를 분석해서,
-- 서비스의 메뉴/페이지 경로(pathname) 목록을 정리한 `routes.json` 파일을 생성해줘.
-
-중요 원칙(추측 금지):
-- menuStructureStaff.ts 파일 내에 명시된 url(routeParams 구조까지 모두 포함)에 대해서만 빠짐 없이 파악할 것.
+=== 중요 원칙(추측 금지) ===
+- menuStructureStaff.ts 파일 내에 명시된 url에 대해서 빠짐 없이 파악할 것.
 - 실제 코드에 근거하지 않는 경로(path)를 만들어내지 말 것.
 - 확실치 않으면 결과에 포함하지 말 것.
 
-출력 파일 생성:
-- 저장소 루트로부터 `./generated/routes.json` 파일을 생성(또는 덮어쓰기)하라.
+=== 출력 파일 생성 ===
+- 저장소 루트 기준 `./generated/routes.json` 파일을 생성(또는 덮어쓰기)하라.
 
-routes.json 스키마(반드시 이 형식):
+=== routes.json 스키마(반드시 이 형식) ===
 - JSON 배열만 포함해야 한다. (설명/주석/코드블록 금지)
 - 각 원소는 아래 필드를 가진다.
 
 [
   {
     "path": "/purchase-order/lines/consignment/print-invoice",
-    "pageTitle": "거래명세서 출력",
-    "menuLabel": "위탁 관리 > 거래명세서 출력"
+    "menuLabel": ["위탁 관리", "거래명세서 출력"],
+    "sidebarOrder": 10
   }
 ]
 
-필드 규칙:
+=== 필드 규칙 ===
 - path:
   - 반드시 "/"로 시작
   - 쿼리스트링/해시(#) 포함 금지
   - trailing slash는 제거(루트 "/"는 제외)
   - "/"(메인) 페이지는 제외 (이번 사이트는 메인 페이지 없이 운영한다)
-- title:
-  - 사용자에게 보여줄 한국어 페이지명
-  - 코드에서 메뉴명/페이지명/컴포넌트명 등을 근거로 최대한 추출
-  - 근거가 부족하면 path를 사람이 읽기 좋은 형태로 변환하여 작성
+  - routeParams 구조를 파악 후, 실제로 리턴되는 결과 url을 작성할 것.
 - menuLabel:
   - 해당 페이지 진입 시 활성화되는 좌측 메뉴의 구조
-  - 가능하면 코드에서 유추
+  - createStaffMenuStructure의 label을 뎁스 순서대로 정리한 문자열 배열
+- sidebarOrder:
+  - createStaffMenuStructure 기준으로 렌더링될 때, 최상단으로부터 렌더링 되는 순서
 
-정렬/중복:
-- 동일 path는 1개만 남겨라(중복 제거).
-- 결과 배열은 렌더링 되는 서비스 페이지의 좌측 메뉴에 보여지는 순으로 정렬.
+=== 작업 절차(네가 수행) ===
+1) ./generated/repomix-outputs/fe-dashboard-urls.xml 파일 확인
+2) 위 규칙으로 routes 목록을 확정
+3) 저장소 루트 기준 ./generated 경로에 routes.json 생성/저장
 
-작업 절차(네가 수행):
-1) ./generated/repomix-outputs/fe-dashboard.xml 파일 확인
-2) 프론트 라우팅 정보가 포함된 파일 또는 내용을 찾아 분석
-3) 위 규칙으로 routes 목록을 확정
-4) 루트 기준 ./generated/routes.json 경로에 routes.json 생성/저장
-
-마지막 출력:
+=== 마지막 출력 ===
 - 파일 생성이 끝나면 콘솔에 한 줄만 출력:
   - "routes.json generated: N routes"
 - (콘솔에 JSON 본문을 출력하지 말 것. 파일로만 저장)
