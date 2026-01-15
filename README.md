@@ -14,16 +14,16 @@
 
 ---
 
-### 주요 명령어(패키지 스크립트)
+## 주요 명령어(패키지 스크립트)
 
 > “가이드 생성/사이드바 생성/빌드”는 아래 스크립트로 모두 수행합니다.
 
 | 목적 | 명령어 | 설명 | 비고 |
 |---|---|---|---|
-| (선행) repomix 생성 | `npm run generate-repomix-outputs` | 프론트/백 코드 압축본 생성 → `generated/repomix-outputs/*.xml` | |
+| (선행) repomix 생성 | `npm run generate-repomix-outputs` | [BE / FE / FE-URL 구조] 코드 압축본 생성 → `generated/repomix-outputs/*.xml` | |
 | (선행) routes 생성 | `npm run generate-routes` | 메뉴/URL 목록 생성 → `generated/routes.json` | **codex 토큰 사용됨** |
 | (선행) sidebar 생성 | `npm run generate-tutorialSidebar` | routes.json → `generated/tutorialSidebar.json` | 결과물 내용은 sidebars.ts의 tutorialSidebar에 복사해야 함 |
-| (선행) 전체 생성 | `npm run generate:all` | 위 3개를 순차 실행(처음 로컬 세팅 시 권장) | |
+| (선행) 전체 생성 | `npm run generate:all` | 위 3개를 순차 실행(개별로 수행 필요 여부 판단 후 모두 수행 필요할 경우만 권장) | |
 | 가이드 문서 생성 | `npm run build-guides` | routes.json + repomix를 기반으로 `docs/**/index.md` 생성/갱신 | **codex 토큰 사용됨** |
 | 로컬 개발 서버 | `npm run start` | Docusaurus 개발 서버 실행(localhost:3000) | |
 
@@ -33,16 +33,16 @@
  
  #### routes.json 생성(`npm run generate-routes`) 시
  
- - codex 토큰이 비교적 많이 사용되기 때문에, 대시보드 메뉴나 pathname에 변경 사항이 크지 않다면 다른 로컬에 생성된 routes.json 파일을 재사용(또는 수정해서 이용)하는 것을 권장
+ - codex 토큰이 비교적 많이 사용되기 때문에, 대시보드 메뉴 및 URL 구조에 변경 사항이 크지 않다면 `data/routes.source.json` 파일을 기반으로 필요한 부분만 추출 또는 수정하고, 로컬의 `generated/routes.json`에 복사하여 이용하는 것을 권장
  
  #### 가이드 파일들 생성(`npm run build-guides`) 시
  - 수십개의 가이드를 한 번에 생성하려고 하면 가이드 퀄리티가 현저히 떨어짐(모두 같은 내용만 반복하는 식으로 작성됨).
- - routes.json에서 가이드를 생성하려는 페이지만 남도록 수정 후 가이드 파일 생성하는 것을 권장
- - 대시보드 메뉴 기준 최상단 메뉴 단위(제품 관리, 견적 관리, ...)로 가이드 생성하면 적절하다고 판단됨.
+ - `generated/routes.json` 내용에 가이드를 생성하려는 페이지만 남도록 수정 후, 가이드 파일 생성 명령어를 수행하는 것을 권장
+ - 대시보드 메뉴 기준 최상단 메뉴 단위(제품 관리, 견적 관리 등 한 번에 약 10여개 페이지)로 가이드 생성하는 것 권장
 
 <br/>
 
-### 권장 실행 순서
+### 실행 순서
 
 #### 로컬에서 가이드 생성 및 확인 (최초)
 
@@ -92,9 +92,9 @@ PR이 main에 merge되어 closed 될 때 워크플로우가 실행되어 사이�
 
 ---
 
-### 작업 시나리오별 가이드
+## 작업 시나리오별 가이드
 
-#### 특정 페이지 가이드만 수정(또는 최신화)하고 싶은 경우
+### 특정 페이지 가이드만 수정(또는 최신화)하고 싶은 경우
 
 1. 로컬의 `generated/routes.json` 파일에서 원하는 페이지의 pathname만 남기고 나머지는 제거한 뒤 저장
 2. 터미널에서 `npm run build-guides`를 실행
@@ -102,7 +102,7 @@ PR이 main에 merge되어 closed 될 때 워크플로우가 실행되어 사이�
 4. 변경된 diff를 확인 후 커밋, 푸시 후 main 브랜치로 PR 생성 - 메뉴 구조가 변경된 것이 아니므로 **`generated/routes.json` 파일은 커밋에서 제외**
 5. PR 머지(머지 시 GitHub Actions로 자동 배포 진행됨)
 
-#### 페이지가 새로 추가된 경우
+### 페이지가 새로 추가된 경우
 
 1. 추가된 페이지만 기존 `generated/routes.json`의 다른 요소와 동일한 형식으로 작성 후, 기존 다른 페이지는 제거한 뒤 저장
 2. `npm run generate-tutorialSidebar` 실행 뒤, `generated/tutorialSidebar.json` 내용을 `sidebars.ts`의 tutorialSidebar 인자에서 적절한 위치에 복사 & 붙여넣기
@@ -111,7 +111,7 @@ PR이 main에 merge되어 closed 될 때 워크플로우가 실행되어 사이�
 5. 변경된 diff를 확인 후 커밋, 푸시 후 main 브랜치로 PR 생성 - 추가된 페이지 요소까지 **`generated/routes.json` 파일에 추가하여 커밋에 포함**
 6. PR 머지(머지 시 GitHub Actions로 자동 배포 진행됨)
 
-#### 기존 URL 구조만 수정된 경우
+### 기존 URL 구조만 수정된 경우
 
 1. 변경된 URL 구조대로 `generated/routes.json` 파일 수정
 2. `npm run generate-tutorialSidebar` 실행 뒤, `generated/tutorialSidebar.json` 내용을 `sidebars.ts`의 tutorialSidebar 인자에 복사 & 붙여넣기
