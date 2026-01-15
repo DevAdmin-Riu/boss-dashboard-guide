@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 대행 출고 지시
 slug: /b2b/orders/lines-b/fulfill-by-non-courier
 sidebar_position: 17
 ---

@@ -1,5 +1,5 @@
 ---
-title: B2B > 주문
+title: B2B > 주문 > 전체 주문 내역
 slug: /b2b/order/all
 sidebar_position: 17
 ---

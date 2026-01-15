@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 전체 발주 내역
 slug: /b2b/purchase-order/lines/consignment/all-status
 sidebar_position: 17
 ---

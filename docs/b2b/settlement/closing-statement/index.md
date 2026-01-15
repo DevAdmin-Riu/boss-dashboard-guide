@@ -1,5 +1,5 @@
 ---
-title: B2B > 매출 정산
+title: B2B > 매출 정산 > 마감명세서 발송
 slug: /b2b/settlement/closing-statement
 sidebar_position: 17
 ---

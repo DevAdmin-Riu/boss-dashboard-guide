@@ -1,5 +1,5 @@
 ---
-title: B2B > 매출 정산
+title: B2B > 매출 정산 > 수정 요청
 slug: /b2b/settlement/edit-request
 sidebar_position: 17
 ---

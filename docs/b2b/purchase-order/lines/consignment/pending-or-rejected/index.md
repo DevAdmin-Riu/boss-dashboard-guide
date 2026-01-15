@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 접수대기 및 거부
 slug: /b2b/purchase-order/lines/consignment/pending-or-rejected
 sidebar_position: 17
 ---

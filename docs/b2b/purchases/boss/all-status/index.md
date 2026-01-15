@@ -1,5 +1,5 @@
 ---
-title: B2B > 매입 정산
+title: B2B > 매입 정산 > 전체 매입 내역
 slug: /b2b/purchases/boss/all-status
 sidebar_position: 17
 ---

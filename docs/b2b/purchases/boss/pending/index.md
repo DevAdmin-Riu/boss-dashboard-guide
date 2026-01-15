@@ -1,5 +1,5 @@
 ---
-title: B2B > 매입 정산
+title: B2B > 매입 정산 > 대행 매입 확정
 slug: /b2b/purchases/boss/pending
 sidebar_position: 17
 ---

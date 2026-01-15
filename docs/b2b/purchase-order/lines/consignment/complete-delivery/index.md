@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 배송 완료 확인
 slug: /b2b/purchase-order/lines/consignment/complete-delivery
 sidebar_position: 17
 ---

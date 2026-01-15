@@ -1,5 +1,5 @@
 ---
-title: B2B > 매출 정산
+title: B2B > 매출 정산 > 매출 마감
 slug: /b2b/settlement/closed
 sidebar_position: 17
 ---

@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 거래명세서 출력
 slug: /b2b/purchase-order/lines/consignment/print-invoice
 sidebar_position: 17
 ---
