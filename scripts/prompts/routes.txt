@@ -73,8 +73,8 @@
   - createStaffMenuStructure 기준으로 렌더링될 때, 최상단으로부터 렌더링 되는 순서
 
 === 작업 절차(네가 수행) ===
-1) ./generated/repomix-outputs/fe-dashboard-urls.xml 파일 확인
-2) 위 규칙으로 routes 목록을 확정
+1) ./generated/repomix-outputs/fe-dashboard-urls.xml 파일에서 createStaffMenuStructure 선언 부분을 먼저 확인
+2) createStaffMenuStructure에서 return 되는 요소를 기준으로, 위 규칙으로 routes 목록을 확정
 3) 저장소 루트 기준 ./generated 경로에 routes.json 생성/저장
 
 === 마지막 출력 ===
