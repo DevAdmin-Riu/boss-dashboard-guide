@@ -45,6 +45,10 @@ function groupKey(route) {
 }
 
 function buildTutorialSidebarItems(routes) {
+  // 원래 배열 순서를 기억
+  const originalIndex = new Map();
+  routes.forEach((r, i) => originalIndex.set(r.path, i));
+
   // 1) group by menuLabel[0]
   const groups = new Map();
   for (const r of routes) {
@@ -53,24 +57,24 @@ function buildTutorialSidebarItems(routes) {
     groups.get(key).push(r);
   }
 
-  // 2) sort categories by min sidebarOrder
+  // 2) sort categories by min sidebarOrder (같으면 routes에 먼저 나온 그룹 우선)
   const categories = [...groups.entries()]
     .map(([label, items]) => ({
       label,
       order: Math.min(...items.map((x) => Number(x.sidebarOrder ?? 9999))),
+      firstIdx: Math.min(
+        ...items.map((x) => originalIndex.get(x.path) ?? 999999)
+      ),
       items,
     }))
-    .sort((a, b) => a.order - b.order || a.label.localeCompare(b.label, "ko"));
+    .sort((a, b) => a.order - b.order || a.firstIdx - b.firstIdx);
 
-  // 3) build items
   const tutorialSidebarItems = categories.map((cat) => {
-    const docs = [...cat.items].sort((a, b) => {
-      const la = baseLabel(a);
-      const lb = baseLabel(b);
-      const c1 = la.localeCompare(lb, "ko");
-      if (c1 !== 0) return c1;
-      return String(a.path).localeCompare(String(b.path));
-    });
+    const docs = [...cat.items].sort(
+      (a, b) =>
+        (originalIndex.get(a.path) ?? 999999) -
+        (originalIndex.get(b.path) ?? 999999)
+    );
 
     // label duplicates -> append last path segment
     const counts = new Map();
@@ -84,18 +88,10 @@ function buildTutorialSidebarItems(routes) {
       const dup = (counts.get(base) || 0) > 1;
       const label = dup ? `${base} (${lastSegment(d.path)})` : base;
 
-      return {
-        type: "doc",
-        id: docIdFromPath(d.path),
-        label,
-      };
+      return { type: "doc", id: docIdFromPath(d.path), label };
     });
 
-    return {
-      type: "category",
-      label: cat.label,
-      items,
-    };
+    return { type: "category", label: cat.label, items };
   });
 
   return ["intro", ...tutorialSidebarItems];
