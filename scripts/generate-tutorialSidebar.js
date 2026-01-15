@@ -3,15 +3,15 @@
  * routes.json -> tutorialSidebar items 배열(JSON) 생성
  *
  * 출력: generated/tutorialSidebar.json
- * - 이 파일 내용(JSON 배열)을 복사해서 sidebars.ts의 tutorialSidebar에 붙여넣으면 됨.
  *
- * 지원:
- * - menuLabel 길이 1:  [Group] -> doc(label=menuLabel[0])
+ * 규칙:
+ * - menuLabel 길이 1:  [Group(menuLabel[0])] -> doc(label=menuLabel[0])
  * - menuLabel 길이 2:  [Group(menuLabel[0])] -> doc(label=menuLabel[1])
  * - menuLabel 길이 3+: [Group(menuLabel[0])] -> [Sub(menuLabel[1])] -> doc(label=마지막 요소)
  *
- * 정렬:
- * - 그룹/서브/문서 모두 routes.json 원본 순서 유지
+ * ★ 가장 중요:
+ * - "routes.json 원본 순서"를 100% 유지한다.
+ *   (그룹/서브/문서 모두 원본 등장 순서 그대로)
  */
 
 const fs = require("node:fs");
@@ -45,107 +45,90 @@ function menu(route) {
   return Array.isArray(route.menuLabel) ? route.menuLabel.filter(Boolean) : [];
 }
 
-function groupKey(route) {
+function groupLabel(route) {
   return menu(route)[0] || "기타";
 }
 
-function subKey(route) {
-  // menuLabel[1]이 있으면 서브 카테고리 키로 사용
+function subLabel(route) {
   return menu(route)[1] || null;
 }
 
-function baseLabel(route) {
+function docLabel(route) {
   const ml = menu(route);
   return ml.length ? ml[ml.length - 1] : String(route.path || "");
 }
 
-function buildTutorialSidebarItems(routes) {
-  // 원본 순서 기억
-  const originalIndex = new Map();
-  routes.forEach((r, i) => originalIndex.set(r.path, i));
+function build(routes) {
+  // 0) 각 그룹 내부/전체에서 "마지막 라벨" 중복 여부 계산 (원본 전체 기준)
+  const labelCountByGroup = new Map(); // group -> Map<label, count>
 
-  // 1) group by menuLabel[0]
-  const groups = new Map();
   for (const r of routes) {
-    const key = groupKey(r);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(r);
+    const g = groupLabel(r);
+    const l = docLabel(r);
+    if (!labelCountByGroup.has(g)) labelCountByGroup.set(g, new Map());
+    const m = labelCountByGroup.get(g);
+    m.set(l, (m.get(l) || 0) + 1);
   }
 
-  // 2) sort categories by min sidebarOrder, then by first appearance
-  const categories = [...groups.entries()]
-    .map(([label, items]) => ({
-      label,
-      order: Math.min(...items.map((x) => Number(x.sidebarOrder ?? 9999))),
-      firstIdx: Math.min(
-        ...items.map((x) => originalIndex.get(x.path) ?? 999999)
-      ),
-      items,
-    }))
-    .sort((a, b) => a.order - b.order || a.firstIdx - b.firstIdx);
+  // 1) streaming builder: routes 순회하며 그룹/서브/문서 구조를 "등장 순서대로" 만든다
+  const groups = new Map(); // groupLabel -> category node
+  const groupOrder = []; // groupLabel 등장 순서 기록
 
-  const tutorialSidebarItems = categories.map((cat) => {
-    // 그룹 내 라우트도 원본 순서 유지
-    const routesInGroup = [...cat.items].sort(
-      (a, b) =>
-        (originalIndex.get(a.path) ?? 999999) -
-        (originalIndex.get(b.path) ?? 999999)
-    );
+  function ensureGroup(gLabel) {
+    if (!groups.has(gLabel)) {
+      groups.set(gLabel, { type: "category", label: gLabel, items: [] });
+      groupOrder.push(gLabel);
+    }
+    return groups.get(gLabel);
+  }
 
-    // 3) (옵션) subgroup by menuLabel[1] if exists (menuLabel 길이 3+에서 의미 있음)
-    const subGroups = new Map(); // key: subLabel|null -> routes[]
-    for (const r of routesInGroup) {
-      const ml = menu(r);
-      const key = ml.length >= 3 ? subKey(r) : null; // 길이 3+만 서브 카테고리로 묶음
-      if (!subGroups.has(key)) subGroups.set(key, []);
-      subGroups.get(key).push(r);
+  // 그룹마다 subCategory 맵을 따로 들고, "첫 등장 위치에" category를 삽입하기 위해
+  // groupNode.__subMap 으로 관리 (출력 시 제거)
+  function ensureSub(groupNode, sLabel) {
+    if (!groupNode.__subMap) groupNode.__subMap = new Map();
+    const map = groupNode.__subMap;
+
+    if (!map.has(sLabel)) {
+      const subNode = { type: "category", label: sLabel, items: [] };
+      map.set(sLabel, subNode);
+      // ★ 서브카테고리는 "처음 등장한 위치"에 바로 삽입
+      groupNode.items.push(subNode);
+    }
+    return map.get(sLabel);
+  }
+
+  for (const r of routes) {
+    const ml = menu(r);
+    const g = groupLabel(r);
+    const groupNode = ensureGroup(g);
+
+    const base = docLabel(r);
+    const isDup = (labelCountByGroup.get(g)?.get(base) || 0) > 1;
+    const label = isDup ? `${base} (${lastSegment(r.path)})` : base;
+
+    const docItem = { type: "doc", id: docIdFromPath(r.path), label };
+
+    // menuLabel 길이 3+ => subcategory(menuLabel[1]) 아래
+    if (ml.length >= 3) {
+      const s = subLabel(r);
+      const subNode = ensureSub(groupNode, s);
+      subNode.items.push(docItem);
+      continue;
     }
 
-    // 서브그룹 순서도 "처음 등장 순서"로 유지
-    const subEntries = [...subGroups.entries()].sort((a, b) => {
-      const aFirst = Math.min(
-        ...a[1].map((x) => originalIndex.get(x.path) ?? 999999)
-      );
-      const bFirst = Math.min(
-        ...b[1].map((x) => originalIndex.get(x.path) ?? 999999)
-      );
-      return aFirst - bFirst;
-    });
+    // menuLabel 길이 1~2 => group 바로 아래, "그 자리"에 doc push
+    groupNode.items.push(docItem);
+  }
 
-    // 그룹 전체에서 label duplicate 계산(서브그룹이 달라도 같은 마지막 라벨이면 중복 처리)
-    const counts = new Map();
-    for (const r of routesInGroup) {
-      const l = baseLabel(r);
-      counts.set(l, (counts.get(l) || 0) + 1);
-    }
-
-    // 서브그룹별 items 생성
-    const catItems = [];
-    for (const [subLabel, subRoutes] of subEntries) {
-      const docs = subRoutes.map((r) => {
-        const base = baseLabel(r);
-        const dup = (counts.get(base) || 0) > 1;
-        const label = dup ? `${base} (${lastSegment(r.path)})` : base;
-        return { type: "doc", id: docIdFromPath(r.path), label };
-      });
-
-      if (subLabel) {
-        // ✅ menuLabel 길이 3+인 경우: 2차 category 생성
-        catItems.push({
-          type: "category",
-          label: subLabel,
-          items: docs,
-        });
-      } else {
-        // ✅ menuLabel 길이 1~2인 경우: 기존처럼 doc 바로 넣음
-        catItems.push(...docs);
-      }
-    }
-
-    return { type: "category", label: cat.label, items: catItems };
+  // 2) 출력: groupOrder 순서대로 category 배열 생성 + 내부 임시 필드 제거
+  const result = groupOrder.map((g) => {
+    const node = groups.get(g);
+    // 임시 필드 제거
+    if (node.__subMap) delete node.__subMap;
+    return node;
   });
 
-  return ["intro", ...tutorialSidebarItems];
+  return result;
 }
 
 function main() {
@@ -166,7 +149,7 @@ function main() {
     process.exit(1);
   }
 
-  const items = buildTutorialSidebarItems(routes);
+  const items = build(routes);
 
   fs.writeFileSync(OUTPUT_JSON, JSON.stringify(items, null, 2) + "\n", "utf-8");
   console.log(`✅ generated: ${OUTPUT_JSON}`);
