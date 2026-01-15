@@ -13,13 +13,48 @@
 === routes.json 스키마(반드시 이 형식) ===
 - JSON 배열만 포함해야 한다. (설명/주석/코드블록 금지)
 - 각 원소는 아래 필드를 가진다.
+- 각 원소 순서는 createStaffMenuStructure에 위에서부터 선언된 순서를 기준으로 하되, navUrlList가 있는 요소의 path는 관련 urls.ts 파일 내에서 "~UrlList" 변수에 선언된 순서로 작성
 
+예시:
 [
+  ...
   {
     "path": "/purchase-order/lines/consignment/print-invoice",
     "menuLabel": ["위탁 관리", "거래명세서 출력"],
     "sidebarOrder": 10
-  }
+  },
+  ...
+  {
+    "path": "/b2b/order/accept",
+    "menuLabel": ["B2B", "주문", "주문 접수"],
+    "sidebarOrder": 19
+  },
+  {
+    "path": "/b2b/order/all",
+    "menuLabel": ["B2B", "주문", "전체 주문 내역"],
+    "sidebarOrder": 19
+  },
+  {
+    "path": "/b2b/purchase-write",
+    "menuLabel": ["B2B", "발주서 작성"],
+    "sidebarOrder": 19
+  },
+  {
+    "path": "/b2b/purchase-order/lines/consignment/draft",
+    "menuLabel": ["B2B", "발주", "협력사 발주"],
+    "sidebarOrder": 19
+  },
+  {
+    "path": "/b2b/purchase-order/lines/consignment/pending-or-rejected",
+    "menuLabel": ["B2B", "발주", "접수대기 및 거부"],
+    "sidebarOrder": 19
+  },
+  {
+    "path": "/b2b/purchase-order/lines/consignment/receive",
+    "menuLabel": ["B2B", "발주", "대행 접수"],
+    "sidebarOrder": 19
+  },
+  ...
 ]
 
 === 필드 규칙 ===
@@ -32,6 +67,8 @@
 - menuLabel:
   - 해당 페이지 진입 시 활성화되는 좌측 메뉴의 구조
   - createStaffMenuStructure의 label을 뎁스 순서대로 정리한 문자열 배열
+  - createStaffMenuStructure의 navUrlList가 있는 메뉴의 경우, 관련 urls.ts 파일 내에 선언된 변수(각각 "NavButtonName", "UrlList"로 끝나는 네이밍으로 선언됨) 참고하여 해당 url이 연결된 버튼 텍스트까지 요소로 추가
+    예) path가 "/b2b/order/accept" 인 경우, menuLabel = ["B2B", "주문", "주문 접수"]
 - sidebarOrder:
   - createStaffMenuStructure 기준으로 렌더링될 때, 최상단으로부터 렌더링 되는 순서
 
