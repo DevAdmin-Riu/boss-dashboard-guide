@@ -4,11 +4,11 @@ slug: /b2b/purchase-order/lines/consignment/complete-delivery
 sidebar_position: 17
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 배송 완료 대상 품목을 확정하고 거래명세서를 추가 발송한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 거래명세서 발송
 

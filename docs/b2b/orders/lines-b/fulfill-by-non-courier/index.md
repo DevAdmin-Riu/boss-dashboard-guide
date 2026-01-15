@@ -4,11 +4,11 @@ slug: /b2b/orders/lines-b/fulfill-by-non-courier
 sidebar_position: 17
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 B2B 대행 출고 처리를 위해 출고 지시와 납품예정일 변경 요청을 진행한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 출고 처리
 

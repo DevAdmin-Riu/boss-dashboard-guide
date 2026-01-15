@@ -4,10 +4,11 @@ slug: /orders/lines-b/fulfill-by-courier-price-adjust
 sidebar_position: 6
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
+
 납품 시 금액 확정 주문을 출고 지시하거나 납품예정일을 변경 요청한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 납품예정일 변경 요청
 
