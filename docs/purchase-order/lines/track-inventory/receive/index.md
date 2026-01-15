@@ -4,11 +4,11 @@ slug: /purchase-order/lines/track-inventory/receive
 sidebar_position: 3
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 접수대기 품목을 접수하거나 거부한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 접수 거부
 

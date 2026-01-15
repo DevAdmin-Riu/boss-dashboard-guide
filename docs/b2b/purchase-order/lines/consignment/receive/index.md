@@ -4,11 +4,11 @@ slug: /b2b/purchase-order/lines/consignment/receive
 sidebar_position: 17
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 발주 접수 대상 품목을 선택해 접수 또는 거부 처리를 진행한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 발주 접수
 

@@ -4,11 +4,11 @@ slug: /purchase-order/lines/track-inventory/inspect
 sidebar_position: 3
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 검수대기 품목을 검수 완료 처리하거나 거래명세서를 취소한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 입고 검수
 

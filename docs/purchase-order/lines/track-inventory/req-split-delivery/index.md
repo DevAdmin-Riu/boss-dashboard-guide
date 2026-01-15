@@ -4,11 +4,11 @@ slug: /purchase-order/lines/track-inventory/req-split-delivery
 sidebar_position: 3
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 분납 요청 건을 확인하거나 발주를 취소한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 요청 확인
 

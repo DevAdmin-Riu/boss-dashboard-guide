@@ -4,10 +4,11 @@ slug: /purchase-order/lines/consignment/all-status
 sidebar_position: 6
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
+
 모든 상태의 위탁 발주 내역을 한 화면에서 확인한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 전체 발주 내역 확인
 

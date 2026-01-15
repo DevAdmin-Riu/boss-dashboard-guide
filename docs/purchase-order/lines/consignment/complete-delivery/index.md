@@ -4,11 +4,11 @@ slug: /purchase-order/lines/consignment/complete-delivery
 sidebar_position: 6
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 거래명세서 출력 후 배송 완료 처리를 하거나 거래명세서를 취소한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 대행 배송 완료
 

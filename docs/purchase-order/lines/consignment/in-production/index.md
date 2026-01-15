@@ -4,10 +4,11 @@ slug: /purchase-order/lines/consignment/in-production
 sidebar_position: 6
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
+
 생산 중 단계의 발주 품목을 확인한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 생산 중 품목 확인
 

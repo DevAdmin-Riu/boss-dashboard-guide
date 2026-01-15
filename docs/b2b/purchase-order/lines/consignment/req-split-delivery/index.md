@@ -4,11 +4,11 @@ slug: /b2b/purchase-order/lines/consignment/req-split-delivery
 sidebar_position: 17
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 분납 요청 건을 확인하고 요청 확인 또는 취소 처리를 진행한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 분납 요청 확인
 

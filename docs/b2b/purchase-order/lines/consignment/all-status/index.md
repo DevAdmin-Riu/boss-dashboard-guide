@@ -4,11 +4,11 @@ slug: /b2b/purchase-order/lines/consignment/all-status
 sidebar_position: 17
 ---
 
-## 이 페이지에서 하는 일
+## 페이지 설명
 
 모든 발주 품목의 상태 히스토리를 확인한다.
 
-## 이 페이지에서만 가능한 작업들
+## 이 페이지에서 가능한 기능들
 
 ### 전체 발주 상태 확인
 
