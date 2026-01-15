@@ -24,29 +24,35 @@ const sidebars: SidebarsConfig = {
       label: "견적 관리",
       items: [
         {
-          type: "doc",
-          id: "req-boss-product/requested/index",
-          label: "포장보스 상품 요청 (requested)",
-        },
-        {
-          type: "doc",
-          id: "req-boss-product/estimate/index",
-          label: "포장보스 상품 요청 (estimate)",
-        },
-        {
-          type: "doc",
-          id: "req-boss-product/confirmed/index",
-          label: "포장보스 상품 요청 (confirmed)",
-        },
-        {
-          type: "doc",
-          id: "req-boss-product/completed/index",
-          label: "포장보스 상품 요청 (completed)",
-        },
-        {
-          type: "doc",
-          id: "req-boss-product/all/index",
-          label: "포장보스 상품 요청 (all)",
+          type: "category",
+          label: "포장보스 상품 요청",
+          items: [
+            {
+              type: "doc",
+              id: "req-boss-product/requested/index",
+              label: "포장보스 상품 요청",
+            },
+            {
+              type: "doc",
+              id: "req-boss-product/estimate/index",
+              label: "상품 견적 작성",
+            },
+            {
+              type: "doc",
+              id: "req-boss-product/confirmed/index",
+              label: "최종 견적 확인",
+            },
+            {
+              type: "doc",
+              id: "req-boss-product/completed/index",
+              label: "상품 등록 완료",
+            },
+            {
+              type: "doc",
+              id: "req-boss-product/all/index",
+              label: "모든 단계 보기",
+            },
+          ],
         },
         {
           type: "doc",
@@ -278,14 +284,20 @@ const sidebars: SidebarsConfig = {
       label: "B2B",
       items: [
         {
-          type: "doc",
-          id: "b2b/order/accept/index",
-          label: "주문 (accept)",
-        },
-        {
-          type: "doc",
-          id: "b2b/order/all/index",
-          label: "주문 (all)",
+          type: "category",
+          label: "주문",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/order/accept/index",
+              label: "주문 접수",
+            },
+            {
+              type: "doc",
+              id: "b2b/order/all/index",
+              label: "전체 주문 내역",
+            },
+          ],
         },
         {
           type: "doc",
@@ -293,94 +305,106 @@ const sidebars: SidebarsConfig = {
           label: "발주서 작성",
         },
         {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/draft/index",
-          label: "발주 (draft)",
+          type: "category",
+          label: "발주",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/draft/index",
+              label: "협력사 발주",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/pending-or-rejected/index",
+              label: "접수대기 및 거부",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/receive/index",
+              label: "대행 접수",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/in-production/index",
+              label: "생산 중",
+            },
+            {
+              type: "doc",
+              id: "b2b/orders/lines-b/fulfill-by-non-courier/index",
+              label: "대행 출고 지시",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/req-epd-update/index",
+              label: "납품예정일 변경 요청",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/req-split-delivery/index",
+              label: "분납 요청",
+            },
+            {
+              type: "doc",
+              id: "b2b/orders/delivery-b/index",
+              label: "대행 배송 확정",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/print-invoice/index",
+              label: "거래명세서 출력",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/complete-delivery/index",
+              label: "배송 완료 확인",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-order/lines/consignment/all-status/index",
+              label: "전체 발주 내역",
+            },
+          ],
         },
         {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/pending-or-rejected/index",
-          label: "발주 (pending-or-rejected)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/receive/index",
-          label: "발주 (receive)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/in-production/index",
-          label: "발주 (in-production)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/req-epd-update/index",
-          label: "발주 (req-epd-update)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/req-split-delivery/index",
-          label: "발주 (req-split-delivery)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/print-invoice/index",
-          label: "발주 (print-invoice)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/complete-delivery/index",
-          label: "발주 (complete-delivery)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchase-order/lines/consignment/all-status/index",
-          label: "발주 (all-status)",
-        },
-        {
-          type: "doc",
-          id: "b2b/orders/lines-b/fulfill-by-non-courier/index",
-          label: "발주 (fulfill-by-non-courier)",
-        },
-        {
-          type: "doc",
-          id: "b2b/orders/delivery-b/index",
-          label: "발주 (delivery-b)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/in-progress/index",
-          label: "매출 정산 (in-progress)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/edit-request/index",
-          label: "매출 정산 (edit-request)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/closing-statement/index",
-          label: "매출 정산 (closing-statement)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/pending/index",
-          label: "매출 정산 (pending)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/closed/index",
-          label: "매출 정산 (closed)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/all/index",
-          label: "매출 정산 (all)",
-        },
-        {
-          type: "doc",
-          id: "b2b/settlement/taxinvoice/index",
-          label: "매출 정산 (taxinvoice)",
+          type: "category",
+          label: "매출 정산",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/settlement/all/index",
+              label: "전체 매출 내역",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/in-progress/index",
+              label: "매출 정산",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/edit-request/index",
+              label: "수정 요청",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/closing-statement/index",
+              label: "마감명세서 발송",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/pending/index",
+              label: "대행 매출 확정",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/closed/index",
+              label: "매출 마감",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/taxinvoice/index",
+              label: "매출 세금계산서",
+            },
+          ],
         },
         {
           type: "doc",
@@ -388,29 +412,35 @@ const sidebars: SidebarsConfig = {
           label: "월별 매출 내역",
         },
         {
-          type: "doc",
-          id: "b2b/purchases/boss/standby-or-pending/index",
-          label: "매입 정산 (standby-or-pending)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchases/boss/revision/index",
-          label: "매입 정산 (revision)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchases/boss/closed/index",
-          label: "매입 정산 (closed)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchases/boss/pending/index",
-          label: "매입 정산 (pending)",
-        },
-        {
-          type: "doc",
-          id: "b2b/purchases/boss/all-status/index",
-          label: "매입 정산 (all-status)",
+          type: "category",
+          label: "매입 정산",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/purchases/boss/standby-or-pending/index",
+              label: "매입 정산",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchases/boss/revision/index",
+              label: "매입 수정 요청",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchases/boss/pending/index",
+              label: "대행 매입 확정",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchases/boss/closed/index",
+              label: "매입 마감",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchases/boss/all-status/index",
+              label: "전체 매입 내역",
+            },
+          ],
         },
         {
           type: "doc",
