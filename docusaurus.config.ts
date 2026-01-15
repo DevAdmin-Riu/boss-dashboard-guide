@@ -67,6 +67,13 @@ const config: Config = {
         alt: "포장보스 로고",
         src: "img/boss-logo.png",
       },
+      items: [
+        {
+          href: "https://admin.pojangboss.com",
+          label: "포장보스 어드민",
+          position: "right",
+        },
+      ],
     },
     prism: {
       theme: prismThemes.github,
