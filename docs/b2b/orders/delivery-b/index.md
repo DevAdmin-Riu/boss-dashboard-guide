@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 대행 배송 확정
 slug: /b2b/orders/delivery-b
 sidebar_position: 17
 ---

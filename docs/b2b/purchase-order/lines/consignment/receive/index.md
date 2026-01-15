@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 대행 접수
 slug: /b2b/purchase-order/lines/consignment/receive
 sidebar_position: 17
 ---

@@ -1,5 +1,5 @@
 ---
-title: "견적 관리 > 포장보스 상품 요청"
+title: "견적 관리 > 포장보스 상품 요청 > 최종 견적 확인"
 slug: /req-boss-product/confirmed
 sidebar_position: 2
 ---

@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 납품예정일 변경 요청
 slug: /b2b/purchase-order/lines/consignment/req-epd-update
 sidebar_position: 17
 ---

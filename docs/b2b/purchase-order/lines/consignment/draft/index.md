@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 협력사 발주
 slug: /b2b/purchase-order/lines/consignment/draft
 sidebar_position: 17
 ---

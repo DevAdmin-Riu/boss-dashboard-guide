@@ -1,5 +1,5 @@
 ---
-title: B2B > 매출 정산
+title: B2B > 매출 정산 > 전체 매출 내역
 slug: /b2b/settlement/all
 sidebar_position: 17
 ---

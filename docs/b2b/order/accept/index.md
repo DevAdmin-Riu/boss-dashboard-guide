@@ -1,5 +1,5 @@
 ---
-title: B2B > 주문
+title: B2B > 주문 > 주문 접수
 slug: /b2b/order/accept
 sidebar_position: 17
 ---

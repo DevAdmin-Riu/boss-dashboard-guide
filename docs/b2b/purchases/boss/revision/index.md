@@ -1,5 +1,5 @@
 ---
-title: B2B > 매입 정산
+title: B2B > 매입 정산 > 매입 수정 요청
 slug: /b2b/purchases/boss/revision
 sidebar_position: 17
 ---

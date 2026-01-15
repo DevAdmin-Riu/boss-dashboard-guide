@@ -1,5 +1,5 @@
 ---
-title: B2B > 매입 정산
+title: B2B > 매입 정산 > 매입 정산
 slug: /b2b/purchases/boss/standby-or-pending
 sidebar_position: 17
 ---

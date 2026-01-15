@@ -1,5 +1,5 @@
 ---
-title: B2B > 매출 정산
+title: B2B > 매출 정산 > 매출 세금계산서
 slug: /b2b/settlement/taxinvoice
 sidebar_position: 17
 ---

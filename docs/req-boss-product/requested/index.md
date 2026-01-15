@@ -1,5 +1,5 @@
 ---
-title: "견적 관리 > 포장보스 상품 요청"
+title: "견적 관리 > 포장보스 상품 요청 > 포장보스 상품 요청"
 slug: /req-boss-product/requested
 sidebar_position: 2
 ---

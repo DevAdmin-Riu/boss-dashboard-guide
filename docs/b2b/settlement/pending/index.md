@@ -1,5 +1,5 @@
 ---
-title: B2B > 매출 정산
+title: B2B > 매출 정산 > 대행 매출 확정
 slug: /b2b/settlement/pending
 sidebar_position: 17
 ---

@@ -281,6 +281,32 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "위탁 오픈몰 관리",
+      items: [
+        {
+          type: "doc",
+          id: "open-mall/price-mismatch/index",
+          label: "가격 불일치 관리",
+        },
+        {
+          type: "doc",
+          id: "open-mall/options-mismatch/index",
+          label: "옵션 불일치 관리",
+        },
+        {
+          type: "doc",
+          id: "open-mall/needs-manager-verification/index",
+          label: "담당자 확인 필요",
+        },
+        {
+          type: "doc",
+          id: "open-mall/automation-error-log/index",
+          label: "자동화 에러 로그",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "B2B",
       items: [
         {

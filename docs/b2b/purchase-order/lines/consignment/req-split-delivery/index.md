@@ -1,5 +1,5 @@
 ---
-title: B2B > 발주
+title: B2B > 발주 > 분납 요청
 slug: /b2b/purchase-order/lines/consignment/req-split-delivery
 sidebar_position: 17
 ---
