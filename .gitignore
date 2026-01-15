@@ -7,7 +7,7 @@
 # Generated files
 .docusaurus
 .cache-loader
-*/repomix-outputs
+/generated
 
 # Misc
 .DS_Store
