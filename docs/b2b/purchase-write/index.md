@@ -4,6 +4,8 @@ slug: /b2b/purchase-write
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 B2B 발주서 작성을 위해 주문 품목을 선택하고 발주서를 등록한다.

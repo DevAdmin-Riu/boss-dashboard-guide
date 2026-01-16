@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/complete-delivery
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 입고 완료된 품목을 배송 완료 처리하고 납품확인서를 관리한다.

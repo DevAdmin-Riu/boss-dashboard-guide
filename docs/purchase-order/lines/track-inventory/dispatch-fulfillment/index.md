@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/dispatch-fulfillment
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 접수된 발주 품목에 대해 납품예정일 변경 요청, 출고 지시, 출고 거부, 분납 요청을 처리한다.

@@ -4,6 +4,8 @@ slug: /b2b/sales-stats/brand
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 브랜드별 월별 매출 집계 내역을 확인한다.

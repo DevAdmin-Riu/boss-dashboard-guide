@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/all-status
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 모든 발주 품목의 상태 히스토리를 확인한다.

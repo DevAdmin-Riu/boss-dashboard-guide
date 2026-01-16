@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/receive
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 접수대기 품목을 접수하거나 거부한다.

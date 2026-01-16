@@ -4,6 +4,8 @@ slug: /orders/delivery-b-by-courier
 sidebar_position: 6
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 택배 대행 배송 건의 배송 확정을 처리한다.

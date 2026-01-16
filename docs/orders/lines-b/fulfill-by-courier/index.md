@@ -4,6 +4,8 @@ slug: /orders/lines-b/fulfill-by-courier
 sidebar_position: 6
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 택배-일반 출고 대상 주문을 출고 지시하거나 납품예정일을 변경 요청한다.

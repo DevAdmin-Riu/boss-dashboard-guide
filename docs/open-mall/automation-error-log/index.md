@@ -4,6 +4,8 @@ slug: /open-mall/automation-error-log
 sidebar_position: 8
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 자동화 에러 로그에서 오픈몰 자동화 에러 기록을 확인하고 "처리완료" 또는 "무시"로 상태를 정리한다.

@@ -4,6 +4,8 @@ slug: /b2b/purchases/boss/pending
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 대행 매입 확정 대상 내역을 확인하고 수정 요청 또는 확정 처리를 진행한다.

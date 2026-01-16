@@ -4,6 +4,8 @@ slug: /b2b/settlement/in-progress
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 매출 정산 대상 건을 확인하고 발송 대기 처리 및 매출 수정 작업을 진행한다.

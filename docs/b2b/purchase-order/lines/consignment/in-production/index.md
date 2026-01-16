@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/in-production
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 생산 중인 발주 품목의 진행 상태를 확인한다.

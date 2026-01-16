@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/all-status
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 모든 상태의 재고 발주 내역을 한 화면에서 확인한다.

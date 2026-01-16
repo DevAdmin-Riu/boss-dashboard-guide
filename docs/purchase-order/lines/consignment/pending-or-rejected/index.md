@@ -4,6 +4,8 @@ slug: /purchase-order/lines/consignment/pending-or-rejected
 sidebar_position: 6
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 접수대기 및 거부 상태의 발주 품목을 다시 발송하거나 취소한다.
