@@ -4,6 +4,8 @@ slug: /b2b/settlement/taxinvoice
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 B2B 매출 세금계산서를 전자발행 또는 수기발행으로 처리한다.

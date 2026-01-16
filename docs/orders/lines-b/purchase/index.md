@@ -4,6 +4,8 @@ slug: /orders/lines-b/purchase
 sidebar_position: 6
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 위탁 주문을 발주서로 등록할 대상을 고르고 발주서 등록 화면으로 이동한다.

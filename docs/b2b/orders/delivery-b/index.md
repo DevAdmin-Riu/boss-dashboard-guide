@@ -4,6 +4,8 @@ slug: /b2b/orders/delivery-b
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 B2B 대행 배송 확정을 위해 양식 다운로드, 일괄 업로드, 개별 확정을 진행한다.

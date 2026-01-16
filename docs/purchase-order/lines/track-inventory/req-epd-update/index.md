@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/req-epd-update
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 납품예정일 변경 요청 건을 승인하거나 발주를 취소한다.

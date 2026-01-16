@@ -4,6 +4,8 @@ slug: /b2b/stats/purchases/vendor
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 협력사별 월별 매입 집계 내역을 확인한다.

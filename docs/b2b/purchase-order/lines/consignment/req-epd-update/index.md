@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/req-epd-update
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 납품예정일 변경 요청 건을 확인하고 승인 또는 취소 처리한다.

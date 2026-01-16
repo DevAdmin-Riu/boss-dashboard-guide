@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/req-split-delivery
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 분납 요청 건을 확인하거나 발주를 취소한다.

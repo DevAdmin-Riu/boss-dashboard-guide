@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/inspect
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 검수대기 품목을 검수 완료 처리하거나 거래명세서를 취소한다.

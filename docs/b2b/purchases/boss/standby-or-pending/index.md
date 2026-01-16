@@ -4,6 +4,8 @@ slug: /b2b/purchases/boss/standby-or-pending
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 대행 매입 정산의 검토 요청 대상을 확인하고 수정 및 검토 요청을 진행한다.

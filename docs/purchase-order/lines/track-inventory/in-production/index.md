@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/in-production
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 생산 중 단계의 발주 품목을 확인한다.

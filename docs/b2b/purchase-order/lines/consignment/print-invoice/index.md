@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/print-invoice
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 거래명세서를 출력하거나 배송 취소를 진행한다.

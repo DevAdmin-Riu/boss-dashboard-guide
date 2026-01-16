@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/req-split-delivery
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 분납 요청 건을 확인하고 요청 확인 또는 취소 처리를 진행한다.

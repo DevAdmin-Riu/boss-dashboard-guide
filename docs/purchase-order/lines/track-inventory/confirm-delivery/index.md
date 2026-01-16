@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/confirm-delivery
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 출고 지시된 발주 품목을 배송 확정하거나 출고를 취소한다.

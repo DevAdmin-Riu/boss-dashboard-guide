@@ -4,6 +4,8 @@ slug: /purchase-order/lines/consignment/complete-delivery
 sidebar_position: 6
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 거래명세서 출력 후 배송 완료 처리를 하거나 거래명세서를 취소한다.

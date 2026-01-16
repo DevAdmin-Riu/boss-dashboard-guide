@@ -4,6 +4,8 @@ slug: /orders/order-detail-a
 sidebar_position: 5
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 일반 주문의 주문상세 항목을 확인하고, 주문번호로 상세 화면으로 이동한다.

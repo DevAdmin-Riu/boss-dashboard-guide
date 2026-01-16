@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/print-invoice
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 배송 확정된 발주 품목의 거래명세서를 출력하거나 배송을 취소한다.

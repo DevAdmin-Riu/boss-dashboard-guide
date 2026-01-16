@@ -4,6 +4,8 @@ slug: /b2b/purchases/boss/all-status
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 모든 매입 내역을 상태별로 확인한다.

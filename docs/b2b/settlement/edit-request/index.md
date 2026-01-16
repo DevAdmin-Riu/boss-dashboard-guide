@@ -4,6 +4,8 @@ slug: /b2b/settlement/edit-request
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 수정 요청된 매출 내역을 확인하고 발송 대기 또는 내역 수정을 진행한다.

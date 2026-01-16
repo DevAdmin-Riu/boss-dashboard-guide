@@ -4,6 +4,8 @@ slug: /b2b/settlement/all
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 전체 매출 내역을 상태별로 확인한다.

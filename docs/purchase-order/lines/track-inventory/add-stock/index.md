@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/add-stock
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 검수 완료된 품목을 재고로 입고 처리하거나 검수를 취소한다.

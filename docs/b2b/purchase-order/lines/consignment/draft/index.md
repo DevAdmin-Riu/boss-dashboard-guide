@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/draft
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 발주서 발송 전 상태의 발주 품목을 확인하고 수정/삭제를 진행한다.

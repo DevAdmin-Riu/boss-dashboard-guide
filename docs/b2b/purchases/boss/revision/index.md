@@ -4,6 +4,8 @@ slug: /b2b/purchases/boss/revision
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 수정 요청 상태의 매입 내역을 확인하고 검토 요청을 진행한다.

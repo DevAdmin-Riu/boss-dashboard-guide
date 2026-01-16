@@ -4,6 +4,8 @@ slug: /b2b/purchase-order/lines/consignment/complete-delivery
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 배송 완료 대상 품목을 확정하고 거래명세서를 추가 발송한다.

@@ -4,6 +4,8 @@ slug: /b2b/settlement/closing-statement
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 마감명세서 발송 대상 매출 내역을 확인하고 필요한 정보를 수정한다.

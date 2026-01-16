@@ -4,6 +4,8 @@ slug: /b2b/settlement/closed
 sidebar_position: 17
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 매출 마감된 내역을 확인한다.

@@ -4,6 +4,8 @@ slug: /purchase-order/lines/track-inventory/draft
 sidebar_position: 3
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 재고 발주서의 작성중 품목을 수정하거나 삭제하고, 새 발주서를 등록한다.
