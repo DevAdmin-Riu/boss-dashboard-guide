@@ -89,6 +89,7 @@ npm run start
 PR이 main에 merge되어 closed 될 때 워크플로우가 실행되어 사이트가 배포됩니다.
 
 - 워크플로우: .github/workflows/deploy.yml
+- 배포 정책: `develop` 브랜치에서 작업 후, `develop` → `main` 브랜치로 PR 생성 및 머지를 진행하여 자동 배포 동작되도록 합니다.
 
 ---
 
