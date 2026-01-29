@@ -4,6 +4,8 @@ slug: /purchase-order/lines/consignment/draft
 sidebar_position: 6
 ---
 
+> _최종 업데이트: 2026-01-15_
+
 ## 페이지 설명
 
 협력사 발주서의 작성중 품목을 수정하거나 삭제한다.
