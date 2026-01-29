@@ -422,13 +422,13 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "b2b/settlement/closed/index",
-              label: "매출 마감",
+              id: "b2b/settlement/taxinvoice/index",
+              label: "매출 세금계산서",
             },
             {
               type: "doc",
-              id: "b2b/settlement/taxinvoice/index",
-              label: "매출 세금계산서",
+              id: "b2b/settlement/closed/index",
+              label: "매출 마감",
             },
           ],
         },

@@ -775,13 +775,13 @@
       "sidebarOrder": 19
     },
     {
-      "path": "/b2b/settlement/closed",
-      "menuLabel": ["B2B", "매출 정산", "매출 마감"],
+      "path": "/b2b/settlement/taxinvoice",
+      "menuLabel": ["B2B", "매출 정산", "매출 세금계산서"],
       "sidebarOrder": 19
     },
     {
-      "path": "/b2b/settlement/taxinvoice",
-      "menuLabel": ["B2B", "매출 정산", "매출 세금계산서"],
+      "path": "/b2b/settlement/closed",
+      "menuLabel": ["B2B", "매출 정산", "매출 마감"],
       "sidebarOrder": 19
     },
     {
