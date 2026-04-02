@@ -1,10 +1,10 @@
 ---
 title: B2B > 발주 > 생산 중
 slug: /b2b/purchase-order/lines/consignment/in-production
-sidebar_position: 17
+sidebar_position: 20
 ---
 
-> _최종 업데이트: 2026-01-15_
+> _최종 업데이트: 2026-04-02_
 
 ## 페이지 설명
 
@@ -21,6 +21,6 @@ sidebar_position: 17
 
 #### 완료 확인: 발주서 상세 화면이 열린다.
 
-#### 발생 가능한 실수/유의사항
+#### 발생 가능한 실수 / 유의사항
 
 - 생산 중 상태에서는 처리 버튼이 노출되지 않는다.
