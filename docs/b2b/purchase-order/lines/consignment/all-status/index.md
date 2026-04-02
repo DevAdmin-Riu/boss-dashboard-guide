@@ -1,10 +1,10 @@
 ---
 title: B2B > 발주 > 전체 발주 내역
 slug: /b2b/purchase-order/lines/consignment/all-status
-sidebar_position: 17
+sidebar_position: 20
 ---
 
-> _최종 업데이트: 2026-01-15_
+> _최종 업데이트: 2026-04-02_
 
 ## 페이지 설명
 
@@ -21,6 +21,6 @@ sidebar_position: 17
 
 #### 완료 확인: 전체 발주 품목이 목록에 표시된다.
 
-#### 발생 가능한 실수/유의사항
+#### 발생 가능한 실수 / 유의사항
 
 - 이 화면에서는 상태 변경 버튼이 제공되지 않는다.

@@ -224,8 +224,23 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "purchase-order/lines/consignment/receive/index",
-          label: "대행 접수",
+          id: "purchase-order/lines/consignment/delegated-receive-by-manual-etc/index",
+          label: "수동 위탁",
+        },
+        {
+          type: "doc",
+          id: "purchase-order/lines/consignment/delegated-receive-by-manual-kakao/index",
+          label: "카톡 위탁",
+        },
+        {
+          type: "doc",
+          id: "purchase-order/lines/consignment/delegated-receive-by-auto-shopping-mall/index",
+          label: "자동 주문 실패",
+        },
+        {
+          type: "doc",
+          id: "purchase-order/lines/consignment/delegated-receive-by-auto-email/index",
+          label: "자동 이메일",
         },
         {
           type: "doc",
@@ -235,17 +250,17 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "orders/lines-b/fulfill-by-courier/index",
-          label: "대행 출고 지시(택배-일반)",
+          label: "출고 지시(택배-일반)",
         },
         {
           type: "doc",
           id: "orders/lines-b/fulfill-by-courier-price-adjust/index",
-          label: "대행 출고 지시(택배-납품 시 금액 확정)",
+          label: "출고 지시(택배-납품 시 금액 확정)",
         },
         {
           type: "doc",
           id: "orders/lines-b/fulfill-by-non-courier/index",
-          label: "대행 출고 지시(화물차)",
+          label: "출고 지시(화물차)",
         },
         {
           type: "doc",
@@ -255,12 +270,17 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "orders/delivery-b-by-courier/index",
-          label: "대행 배송 확정(택배)",
+          label: "수동 배송 확정(택배)",
+        },
+        {
+          type: "doc",
+          id: "orders/delivery-b-by-courier-auto/index",
+          label: "자동 배송 확정(택배)",
         },
         {
           type: "doc",
           id: "orders/delivery-b-by-non-courier/index",
-          label: "대행 배송 확정(화물차)",
+          label: "배송 확정(화물차)",
         },
         {
           type: "doc",
@@ -290,25 +310,401 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "open-mall/options-mismatch/index",
-          label: "옵션 불일치 관리",
-        },
-        {
-          type: "doc",
           id: "open-mall/needs-manager-verification/index",
-          label: "담당자 확인 필요",
+          label: "위탁 담당자 확인",
         },
         {
           type: "doc",
           id: "open-mall/automation-error-log/index",
           label: "자동화 에러 로그",
         },
+        {
+          type: "doc",
+          id: "open-mall/payment-log/index",
+          label: "오픈몰 결제 내역",
+        },
+        {
+          type: "doc",
+          id: "wowPress-products/index",
+          label: "와우프레스 상품",
+        },
       ],
     },
     {
       type: "category",
+      label: "출고 관리",
+      items: [
+        {
+          type: "doc",
+          id: "orders/fulfillments-a/index",
+          label: "재고제품 출고대기(택배)",
+        },
+        {
+          type: "doc",
+          id: "orders/fulfillments-d/index",
+          label: "재고제품 출고대기(합포장)",
+        },
+        {
+          type: "doc",
+          id: "orders/fulfillments-c/index",
+          label: "재고제품 출고대기(기타)",
+        },
+        {
+          type: "doc",
+          id: "orders/lines-b/fulfill-by-courier/index",
+          label: "위탁제품 출고지시",
+        },
+        {
+          type: "doc",
+          id: "orders/lines-b/fulfilled/index",
+          label: "위탁제품 출고완료",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "배송 관리",
+      items: [
+        {
+          type: "doc",
+          id: "orders/delivery-all/index",
+          label: "배송 현황",
+        },
+        {
+          type: "doc",
+          id: "orders/delivery-a/index",
+          label: "재고 배송(택배)",
+        },
+        {
+          type: "doc",
+          id: "orders/batch-picking/index",
+          label: "재고 배송(합포장)",
+        },
+        {
+          type: "doc",
+          id: "orders/delivery-c/index",
+          label: "재고 배송(기타)",
+        },
+        {
+          type: "doc",
+          id: "orders/fulfillment-inspect/index",
+          label: "재고 배송 검수(택배)",
+        },
+        {
+          type: "doc",
+          id: "shipping-info/history/index",
+          label: "택배 발송 내역",
+        },
+        {
+          type: "doc",
+          id: "shipping-info/statistics/index",
+          label: "택배 발송 통계",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "본부수익금 정산 관리",
+      items: [
+        {
+          type: "doc",
+          id: "settlement/mileage/before-confirmed/index",
+          label: "본부수익금 미확정",
+        },
+        {
+          type: "doc",
+          id: "settlement/mileage/confirmed-or-reviewing-by-admin/index",
+          label: "본부수익금 지급검토",
+        },
+        {
+          type: "doc",
+          id: "settlement/mileage/waiting-for-payment/index",
+          label: "본부수익금 지급대기",
+        },
+        {
+          type: "doc",
+          id: "settlement/mileage/paid/index",
+          label: "본부수익금 지급완료",
+        },
+        {
+          type: "doc",
+          id: "settlement/mileage/all-status/index",
+          label: "본부수익금 전체보기",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "브랜드 몰 관리",
+      items: [
+        {
+          type: "doc",
+          id: "brands/index",
+          label: "브랜드 리스트",
+        },
+        {
+          type: "doc",
+          id: "brand-histories/index",
+          label: "브랜드 운영 이력",
+        },
+        {
+          type: "doc",
+          id: "dev-cost/index",
+          label: "기타 비용 내역",
+        },
+        {
+          type: "doc",
+          id: "brands/groups/index",
+          label: "브랜드 그룹 연동",
+        },
+        {
+          type: "category",
+          label: "본부 로열티 정산",
+          items: [
+            {
+              type: "doc",
+              id: "settlement/royalty/before-confirmed/index",
+              label: "미확정",
+            },
+            {
+              type: "doc",
+              id: "settlement/royalty/confirmed-or-reviewing-by-admin/index",
+              label: "지급검토",
+            },
+            {
+              type: "doc",
+              id: "settlement/royalty/waiting-for-payment/index",
+              label: "지급대기",
+            },
+            {
+              type: "doc",
+              id: "settlement/royalty/paid/index",
+              label: "지급완료",
+            },
+            {
+              type: "doc",
+              id: "settlement/royalty/all-status/index",
+              label: "전체보기",
+            },
+          ],
+        },
+        {
+          type: "doc",
+          id: "brands/exclusive-variant-stock-info/index",
+          label: "브랜드 별 전용/악성 재고 현황",
+        },
+        {
+          type: "doc",
+          id: "digital-contract/template-list/index",
+          label: "전자계약 서식 리스트",
+        },
+        {
+          type: "doc",
+          id: "digital-contract/document-list/index",
+          label: "전자계약 문서 리스트",
+        },
+        {
+          type: "doc",
+          id: "paid-notice-count/index",
+          label: "알림톡 발송 카운트 내역",
+        },
+        {
+          type: "doc",
+          id: "digital-contract-count/index",
+          label: "전자계약 서명 카운트 내역",
+        },
+        {
+          type: "doc",
+          id: "brands/vacs-fee-events/index",
+          label: "본부 충전금 수수료 내역",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "매출인식 관리",
+      items: [
+        {
+          type: "doc",
+          id: "hq/info/reverse-fee/index",
+          label: "금융 거래 내역",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "발주원",
+      items: [
+        {
+          type: "doc",
+          id: "products/type-b/index",
+          label: "직거래 상품",
+        },
+        {
+          type: "doc",
+          id: "stock/fbv/type-b/index",
+          label: "직거래 상품 재고관리",
+        },
+        {
+          type: "category",
+          label: "직거래 주문 리스트",
+          items: [
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/index",
+              label: "주문 접수",
+            },
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/fulfilled/index",
+              label: "상품 배송",
+            },
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/tracking-a/index",
+              label: "배송중 (택배)",
+            },
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/completed-a/index",
+              label: "배송완료 (택배)",
+            },
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/tracking-b/index",
+              label: "배송중 (화물차)",
+            },
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/completed-b/index",
+              label: "배송완료 (화물차)",
+            },
+          ],
+        },
+        {
+          type: "doc",
+          id: "shipping-info/shipping-day/index",
+          label: "배송요일 / 최소 주문금액 설정",
+        },
+        {
+          type: "doc",
+          id: "later-credits-setting/index",
+          label: "매장 외상 설정",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/before-confirmed/index",
+          label: "직거래 상품 대금 미확정",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/confirmed-or-reviewing-by-admin/index",
+          label: "직거래 상품 대금 지급검토",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/waiting-for-payment/index",
+          label: "직거래 상품 대금 지급대기",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/paid/index",
+          label: "직거래 상품 대금 지급완료",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/all-status/index",
+          label: "직거래 상품 대금 전체보기",
+        },
+        {
+          type: "category",
+          label: "직거래 교환/반품 신청 리스트",
+          items: [
+            {
+              type: "doc",
+              id: "refund-question/vendor/all/index",
+              label: "전체 주문 문의",
+            },
+            {
+              type: "doc",
+              id: "refund-question/vendor/requested/index",
+              label: "신규 교환/반품",
+            },
+            {
+              type: "doc",
+              id: "refund-question/vendor/accepted/index",
+              label: "교환/반품 접수",
+            },
+          ],
+        },
+      ],
+    },
+    {
+    "type": "category",
+    "label": "링커스",
+    "items": [
+      {
+        "type": "doc",
+        "id": "notices/hq-to-user/index",
+        "label": "가맹본부 공지사항"
+      },
+      {
+        "type": "doc",
+        "id": "brand-store-requests/index",
+        "label": "매장 요청 리스트"
+      },
+      {
+        "type": "doc",
+        "id": "training-docs/operation-manual/index",
+        "label": "운영 매뉴얼"
+      },
+      {
+        "type": "doc",
+        "id": "training-docs/menu-recipe/index",
+        "label": "메뉴 레시피"
+      },
+      {
+        "type": "doc",
+        "id": "brand-stores/ops-check/templates/index",
+        "label": "점검 양식"
+      },
+      {
+        "type": "category",
+        "label": "점검 보고서",
+        "items": [
+          {
+            "type": "doc",
+            "id": "brand-stores/ops-check/reports/dashboard/index",
+            "label": "대시보드"
+          },
+          {
+            "type": "doc",
+            "id": "brand-stores/ops-check/reports/list/index",
+            "label": "보고서 리스트"
+          }
+        ]
+      },
+      {
+        "type": "doc",
+        "id": "brand-stores/ops-check/recheck_report_items/index",
+        "label": "재점검"
+      },
+      {
+        "type": "doc",
+        "id": "brand-stores/ops-check/consultations/index",
+        "label": "상담 내역"
+      }
+    ]
+  },
+    {
+      type: "category",
       label: "B2B",
       items: [
+        {
+          type: "doc",
+          id: "b2b/purchase-order/lines/consignment/b2b-all-status/index",
+          label: "B2B 납기 리스트",
+        },
         {
           type: "category",
           label: "주문",
@@ -347,7 +743,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "b2b/purchase-order/lines/consignment/receive/index",
-              label: "대행 접수",
+              label: "발주 접수",
             },
             {
               type: "doc",
@@ -475,6 +871,77 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+      {
+    "type": "category",
+    "label": "고객 문의 관리",
+    "items": [
+      {
+        "type": "doc",
+        "id": "customer-qa/suggest-system/index",
+        "label": "시스템 개선 제안"
+      },
+      {
+        "type": "doc",
+        "id": "customer-qa/boss-qa/index",
+        "label": "포장보스 문의"
+      },
+      {
+        "type": "doc",
+        "id": "claims/index",
+        "label": "클레임 보상 내역"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/requested/index",
+        "label": "신규 교환/반품/기타문의"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/accepted/index",
+        "label": "교환/반품/기타문의 접수"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/reject/index",
+        "label": "교환/반품/기타문의 반려"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/change-pending/index",
+        "label": "교환 대기"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/change-success/index",
+        "label": "교환 확정"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/collected-inspect/index",
+        "label": "반품 회수 및 검수"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/refund-pending/index",
+        "label": "반품 환불 대기"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/refund-success/index",
+        "label": "반품 환불 완료"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/stock-included-requested/index",
+        "label": "반품 재고 재포함"
+      },
+      {
+        "type": "doc",
+        "id": "refund-question/boss/all/index",
+        "label": "전체 주문 문의"
+      }
+    ]
+  },
   ],
 };
 
