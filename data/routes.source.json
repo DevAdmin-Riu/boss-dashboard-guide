@@ -1,27 +1,57 @@
 {
   "__meta": {
-    "lastUpdated": "2026-01-15",
+    "lastUpdated": "2026-04-02",
     "note": "Codex로 generated/routes.json 파일을 매번 생성하면 비용/시간이 커서, routes.json 원본을 Git에 보관합니다. 서비스의 메뉴 구조가 변경되면 routes 내용에도 반영이 필요하고, 가이드 생성 시에는 필요한 path만 추려 generated/routes.json으로 복사해 사용하세요."
   },
   "routes": [
     {
       "path": "/products/type-a",
       "menuLabel": ["제품 관리", "제품"],
-      "sidebarOrder": 2
+      "sidebarOrder": 1
     },
     {
       "path": "/categories",
       "menuLabel": ["제품 관리", "카테고리"],
-      "sidebarOrder": 2
-    },
-    {
-      "path": "/reserve-change",
-      "menuLabel": ["제품 관리", "가격 정보 변경 예약"],
-      "sidebarOrder": 2
+      "sidebarOrder": 1
     },
     {
       "path": "/products/variant-manage-events",
       "menuLabel": ["제품 관리", "제품 관리 이력"],
+      "sidebarOrder": 1
+    },
+    {
+      "path": "/brand-products/boss",
+      "menuLabel": ["상품 관리", "상품 리스트", "보스 상품"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/brand-products/fbv",
+      "menuLabel": ["상품 관리", "상품 리스트", "직거래 상품"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/brand-products/b2b",
+      "menuLabel": ["상품 관리", "상품 리스트", "B2B 상품"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/brand-products/bundle",
+      "menuLabel": ["상품 관리", "상품 리스트", "세트 상품"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/brand-products/package",
+      "menuLabel": ["상품 관리", "상품 리스트", "패키지 상품"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/brand-products/bpv-collection",
+      "menuLabel": ["상품 관리", "상품 리스트", "상품 그룹"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/brand-products/variant-manage-events",
+      "menuLabel": ["상품 관리", "상품 관리 이력"],
       "sidebarOrder": 2
     },
     {
@@ -71,7 +101,7 @@
     },
     {
       "path": "/purchase-order/lines/track-inventory/receive",
-      "menuLabel": ["재고 발주 관리", "대행 접수"],
+      "menuLabel": ["재고 발주 관리", "발주 접수"],
       "sidebarOrder": 4
     },
     {
@@ -81,7 +111,7 @@
     },
     {
       "path": "/purchase-order/lines/track-inventory/dispatch-fulfillment",
-      "menuLabel": ["재고 발주 관리", "대행 출고 지시"],
+      "menuLabel": ["재고 발주 관리", "출고 지시"],
       "sidebarOrder": 4
     },
     {
@@ -96,7 +126,7 @@
     },
     {
       "path": "/purchase-order/lines/track-inventory/confirm-delivery",
-      "menuLabel": ["재고 발주 관리", "대행 배송 확정(택배)"],
+      "menuLabel": ["재고 발주 관리", "수동 배송 확정(택배)"],
       "sidebarOrder": 4
     },
     {
@@ -235,8 +265,23 @@
       "sidebarOrder": 7
     },
     {
-      "path": "/purchase-order/lines/consignment/receive",
-      "menuLabel": ["위탁 관리", "대행 접수"],
+      "path": "/purchase-order/lines/consignment/delegated-receive-by-manual-etc",
+      "menuLabel": ["위탁 관리", "수동 위탁"],
+      "sidebarOrder": 7
+    },
+    {
+      "path": "/purchase-order/lines/consignment/delegated-receive-by-manual-kakao",
+      "menuLabel": ["위탁 관리", "카톡 위탁"],
+      "sidebarOrder": 7
+    },
+    {
+      "path": "/purchase-order/lines/consignment/delegated-receive-by-auto-shopping-mall",
+      "menuLabel": ["위탁 관리", "자동 주문 실패"],
+      "sidebarOrder": 7
+    },
+    {
+      "path": "/purchase-order/lines/consignment/delegated-receive-by-auto-email",
+      "menuLabel": ["위탁 관리", "자동 이메일"],
       "sidebarOrder": 7
     },
     {
@@ -246,17 +291,17 @@
     },
     {
       "path": "/orders/lines-b/fulfill-by-courier",
-      "menuLabel": ["위탁 관리", "대행 출고 지시(택배-일반)"],
+      "menuLabel": ["위탁 관리", "출고 지시(택배-일반)"],
       "sidebarOrder": 7
     },
     {
       "path": "/orders/lines-b/fulfill-by-courier-price-adjust",
-      "menuLabel": ["위탁 관리", "대행 출고 지시(택배-납품 시 금액 확정)"],
+      "menuLabel": ["위탁 관리", "출고 지시(택배-납품 시 금액 확정)"],
       "sidebarOrder": 7
     },
     {
       "path": "/orders/lines-b/fulfill-by-non-courier",
-      "menuLabel": ["위탁 관리", "대행 출고 지시(화물차)"],
+      "menuLabel": ["위탁 관리", "출고 지시(화물차)"],
       "sidebarOrder": 7
     },
     {
@@ -266,12 +311,17 @@
     },
     {
       "path": "/orders/delivery-b-by-courier",
-      "menuLabel": ["위탁 관리", "대행 배송 확정(택배)"],
+      "menuLabel": ["위탁 관리", "수동 배송 확정(택배)"],
+      "sidebarOrder": 7
+    },
+    {
+      "path": "/orders/delivery-b-by-courier-auto",
+      "menuLabel": ["위탁 관리", "자동 배송 확정(택배)"],
       "sidebarOrder": 7
     },
     {
       "path": "/orders/delivery-b-by-non-courier",
-      "menuLabel": ["위탁 관리", "대행 배송 확정(화물차)"],
+      "menuLabel": ["위탁 관리", "배송 확정(화물차)"],
       "sidebarOrder": 7
     },
     {
@@ -295,18 +345,23 @@
       "sidebarOrder": 8
     },
     {
-      "path": "/open-mall/options-mismatch",
-      "menuLabel": ["위탁 오픈몰 관리", "옵션 불일치 관리"],
-      "sidebarOrder": 8
-    },
-    {
       "path": "/open-mall/needs-manager-verification",
-      "menuLabel": ["위탁 오픈몰 관리", "담당자 확인 필요"],
+      "menuLabel": ["위탁 오픈몰 관리", "위탁 담당자 확인"],
       "sidebarOrder": 8
     },
     {
       "path": "/open-mall/automation-error-log",
       "menuLabel": ["위탁 오픈몰 관리", "자동화 에러 로그"],
+      "sidebarOrder": 8
+    },
+    {
+      "path": "/open-mall/payment-log",
+      "menuLabel": ["위탁 오픈몰 관리", "오픈몰 결제 내역"],
+      "sidebarOrder": 8
+    },
+    {
+      "path": "/wowPress-products",
+      "menuLabel": ["위탁 오픈몰 관리", "와우프레스 상품"],
       "sidebarOrder": 8
     },
     {
@@ -445,27 +500,27 @@
       "sidebarOrder": 12
     },
     {
-      "path": "/mileage-settlement/before-confirmed",
+      "path": "/settlement/mileage/before-confirmed",
       "menuLabel": ["본부수익금 정산 관리", "본부수익금 미확정"],
       "sidebarOrder": 13
     },
     {
-      "path": "/mileage-settlement/reviewing-by-admin",
+      "path": "/settlement/mileage/confirmed-or-reviewing-by-admin",
       "menuLabel": ["본부수익금 정산 관리", "본부수익금 지급검토"],
       "sidebarOrder": 13
     },
     {
-      "path": "/mileage-settlement/waiting-for-payment",
+      "path": "/settlement/mileage/waiting-for-payment",
       "menuLabel": ["본부수익금 정산 관리", "본부수익금 지급대기"],
       "sidebarOrder": 13
     },
     {
-      "path": "/mileage-settlement/paid",
+      "path": "/settlement/mileage/paid",
       "menuLabel": ["본부수익금 정산 관리", "본부수익금 지급완료"],
       "sidebarOrder": 13
     },
     {
-      "path": "/mileage-settlement/all-status",
+      "path": "/settlement/mileage/all-status",
       "menuLabel": ["본부수익금 정산 관리", "본부수익금 전체보기"],
       "sidebarOrder": 13
     },
@@ -515,11 +570,6 @@
       "sidebarOrder": 16
     },
     {
-      "path": "/brands/exclusive-variant-stock-info",
-      "menuLabel": ["브랜드 몰 관리", "브랜드 별 전용/악성 재고 현황"],
-      "sidebarOrder": 16
-    },
-    {
       "path": "/brand-histories",
       "menuLabel": ["브랜드 몰 관리", "브랜드 운영 이력"],
       "sidebarOrder": 16
@@ -530,63 +580,63 @@
       "sidebarOrder": 16
     },
     {
-      "path": "/paid-notice-count",
-      "menuLabel": ["브랜드 몰 관리", "알림톡 발송 카운트 충전/차감 내역"],
-      "sidebarOrder": 16
-    },
-    {
-      "path": "/digital-contract-count",
-      "menuLabel": ["브랜드 몰 관리", "전자계약 서명 카운트 충전/차감 내역"],
-      "sidebarOrder": 16
-    },
-    {
-      "path": "/brands/vacs-fee-events",
-      "menuLabel": ["브랜드 몰 관리", "본부 충전금 수수료 내역"],
-      "sidebarOrder": 16
-    },
-    {
-      "path": "/brands/variant-manage-events",
-      "menuLabel": ["브랜드 몰 관리", "상품 관리 이력"],
-      "sidebarOrder": 16
-    },
-    {
       "path": "/brands/groups",
       "menuLabel": ["브랜드 몰 관리", "브랜드 그룹 연동"],
       "sidebarOrder": 16
     },
     {
-      "path": "/training-docs/operation-manual",
-      "menuLabel": ["브랜드 몰 관리", "운영 매뉴얼"],
+      "path": "/settlement/royalty/before-confirmed",
+      "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "미확정"],
       "sidebarOrder": 16
     },
     {
-      "path": "/training-docs/menu-recipe",
-      "menuLabel": ["브랜드 몰 관리", "메뉴 레시피"],
+      "path": "/settlement/royalty/confirmed-or-reviewing-by-admin",
+      "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "지급검토"],
       "sidebarOrder": 16
     },
     {
-      "path": "/brand-stores/ops-check/templates",
-      "menuLabel": ["브랜드 몰 관리", "점검 양식"],
+      "path": "/settlement/royalty/waiting-for-payment",
+      "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "지급대기"],
       "sidebarOrder": 16
     },
     {
-      "path": "/brand-stores/ops-check/reports/dashboard",
-      "menuLabel": ["브랜드 몰 관리", "점검 보고서", "대시보드"],
+      "path": "/settlement/royalty/paid",
+      "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "지급완료"],
       "sidebarOrder": 16
     },
     {
-      "path": "/brand-stores/ops-check/reports/list",
-      "menuLabel": ["브랜드 몰 관리", "점검 보고서", "보고서 리스트"],
+      "path": "/settlement/royalty/all-status",
+      "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "전체보기"],
       "sidebarOrder": 16
     },
     {
-      "path": "/brand-stores/ops-check/recheck_report_items",
-      "menuLabel": ["브랜드 몰 관리", "재점검"],
+      "path": "/brands/exclusive-variant-stock-info",
+      "menuLabel": ["브랜드 몰 관리", "브랜드 별 전용/악성 재고 현황"],
       "sidebarOrder": 16
     },
     {
-      "path": "/brand-stores/ops-check/consultations",
-      "menuLabel": ["브랜드 몰 관리", "상담 내역"],
+      "path": "/digital-contract/template-list",
+      "menuLabel": ["브랜드 몰 관리", "전자계약 서식 리스트"],
+      "sidebarOrder": 16
+    },
+    {
+      "path": "/digital-contract/document-list",
+      "menuLabel": ["브랜드 몰 관리", "전자계약 문서 리스트"],
+      "sidebarOrder": 16
+    },
+    {
+      "path": "/paid-notice-count",
+      "menuLabel": ["브랜드 몰 관리", "알림톡 발송 카운트 내역"],
+      "sidebarOrder": 16
+    },
+    {
+      "path": "/digital-contract-count",
+      "menuLabel": ["브랜드 몰 관리", "전자계약 서명 카운트 내역"],
+      "sidebarOrder": 16
+    },
+    {
+      "path": "/brands/vacs-fee-events",
+      "menuLabel": ["브랜드 몰 관리", "본부 충전금 수수료 내역"],
       "sidebarOrder": 16
     },
     {
@@ -640,27 +690,32 @@
       "sidebarOrder": 18
     },
     {
-      "path": "/fbv-settlement/before-confirmed",
+      "path": "/later-credits-setting",
+      "menuLabel": ["발주원", "매장 외상 설정"],
+      "sidebarOrder": 18
+    },
+    {
+      "path": "/settlement/fbv/before-confirmed",
       "menuLabel": ["발주원", "직거래 상품 대금 미확정"],
       "sidebarOrder": 18
     },
     {
-      "path": "/fbv-settlement/reviewing-by-admin",
+      "path": "/settlement/fbv/confirmed-or-reviewing-by-admin",
       "menuLabel": ["발주원", "직거래 상품 대금 지급검토"],
       "sidebarOrder": 18
     },
     {
-      "path": "/fbv-settlement/waiting-for-payment",
+      "path": "/settlement/fbv/waiting-for-payment",
       "menuLabel": ["발주원", "직거래 상품 대금 지급대기"],
       "sidebarOrder": 18
     },
     {
-      "path": "/fbv-settlement/paid",
+      "path": "/settlement/fbv/paid",
       "menuLabel": ["발주원", "직거래 상품 대금 지급완료"],
       "sidebarOrder": 18
     },
     {
-      "path": "/fbv-settlement/all-status",
+      "path": "/settlement/fbv/all-status",
       "menuLabel": ["발주원", "직거래 상품 대금 전체보기"],
       "sidebarOrder": 18
     },
@@ -680,244 +735,299 @@
       "sidebarOrder": 18
     },
     {
+      "path": "/notices/hq-to-user",
+      "menuLabel": ["링커스", "가맹본부 공지사항"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/brand-store-requests",
+      "menuLabel": ["링커스", "매장 요청 리스트"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/training-docs/operation-manual",
+      "menuLabel": ["링커스", "운영 매뉴얼"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/training-docs/menu-recipe",
+      "menuLabel": ["링커스", "메뉴 레시피"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/brand-stores/ops-check/templates",
+      "menuLabel": ["링커스", "점검 양식"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/brand-stores/ops-check/reports/dashboard",
+      "menuLabel": ["링커스", "점검 보고서", "대시보드"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/brand-stores/ops-check/reports/list",
+      "menuLabel": ["링커스", "점검 보고서", "보고서 리스트"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/brand-stores/ops-check/recheck_report_items",
+      "menuLabel": ["링커스", "재점검"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/brand-stores/ops-check/consultations",
+      "menuLabel": ["링커스", "상담 내역"],
+      "sidebarOrder": 19
+    },
+    {
+      "path": "/b2b/purchase-order/lines/consignment/b2b-all-status",
+      "menuLabel": ["B2B", "B2B 납기 리스트"],
+      "sidebarOrder": 20
+    },
+    {
       "path": "/b2b/order/accept",
       "menuLabel": ["B2B", "주문", "주문 접수"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/order/all",
       "menuLabel": ["B2B", "주문", "전체 주문 내역"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-write",
       "menuLabel": ["B2B", "발주서 작성"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/draft",
       "menuLabel": ["B2B", "발주", "협력사 발주"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/pending-or-rejected",
       "menuLabel": ["B2B", "발주", "접수대기 및 거부"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/receive",
-      "menuLabel": ["B2B", "발주", "대행 접수"],
-      "sidebarOrder": 19
+      "menuLabel": ["B2B", "발주", "발주 접수"],
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/in-production",
       "menuLabel": ["B2B", "발주", "생산 중"],
-      "sidebarOrder": 19
-    },
-    {
-      "path": "/b2b/orders/lines-b/fulfill-by-non-courier",
-      "menuLabel": ["B2B", "발주", "대행 출고 지시"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/req-epd-update",
       "menuLabel": ["B2B", "발주", "납품예정일 변경 요청"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/req-split-delivery",
       "menuLabel": ["B2B", "발주", "분납 요청"],
-      "sidebarOrder": 19
-    },
-    {
-      "path": "/b2b/orders/delivery-b",
-      "menuLabel": ["B2B", "발주", "대행 배송 확정"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/print-invoice",
       "menuLabel": ["B2B", "발주", "거래명세서 출력"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/complete-delivery",
       "menuLabel": ["B2B", "발주", "배송 완료 확인"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/all-status",
       "menuLabel": ["B2B", "발주", "전체 발주 내역"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
-      "path": "/b2b/settlement/all",
-      "menuLabel": ["B2B", "매출 정산", "전체 매출 내역"],
-      "sidebarOrder": 19
+      "path": "/b2b/orders/lines-b/fulfill-by-non-courier",
+      "menuLabel": ["B2B", "발주", "대행 출고 지시"],
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/orders/delivery-b",
+      "menuLabel": ["B2B", "발주", "대행 배송 확정"],
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/in-progress",
       "menuLabel": ["B2B", "매출 정산", "매출 정산"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/edit-request",
       "menuLabel": ["B2B", "매출 정산", "수정 요청"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/closing-statement",
       "menuLabel": ["B2B", "매출 정산", "마감명세서 발송"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/pending",
       "menuLabel": ["B2B", "매출 정산", "대행 매출 확정"],
-      "sidebarOrder": 19
-    },
-    {
-      "path": "/b2b/settlement/taxinvoice",
-      "menuLabel": ["B2B", "매출 정산", "매출 세금계산서"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/closed",
       "menuLabel": ["B2B", "매출 정산", "매출 마감"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/settlement/all",
+      "menuLabel": ["B2B", "매출 정산", "전체 매출 내역"],
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/settlement/taxinvoice",
+      "menuLabel": ["B2B", "매출 정산", "매출 세금계산서"],
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/sales-stats/brand",
       "menuLabel": ["B2B", "월별 매출 내역"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/standby-or-pending",
       "menuLabel": ["B2B", "매입 정산", "매입 정산"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/revision",
       "menuLabel": ["B2B", "매입 정산", "매입 수정 요청"],
-      "sidebarOrder": 19
-    },
-    {
-      "path": "/b2b/purchases/boss/pending",
-      "menuLabel": ["B2B", "매입 정산", "대행 매입 확정"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/closed",
       "menuLabel": ["B2B", "매입 정산", "매입 마감"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/purchases/boss/pending",
+      "menuLabel": ["B2B", "매입 정산", "대행 매입 확정"],
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/all-status",
       "menuLabel": ["B2B", "매입 정산", "전체 매입 내역"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/b2b/stats/purchases/vendor",
       "menuLabel": ["B2B", "월별 매입 내역"],
-      "sidebarOrder": 19
+      "sidebarOrder": 20
     },
     {
       "path": "/brand-stores",
       "menuLabel": ["매장 관리", "매장 리스트"],
-      "sidebarOrder": 20
+      "sidebarOrder": 21
     },
     {
       "path": "/credits",
       "menuLabel": ["매장 관리", "충전금 이용 내역"],
-      "sidebarOrder": 20
+      "sidebarOrder": 21
     },
     {
       "path": "/rcoins",
       "menuLabel": ["매장 관리", "포인트 이용 내역"],
-      "sidebarOrder": 20
+      "sidebarOrder": 21
     },
     {
       "path": "/customers/hq-staff",
       "menuLabel": ["사용자 관리", "사용자(가맹본부) 리스트"],
-      "sidebarOrder": 21
+      "sidebarOrder": 22
     },
     {
       "path": "/customers/store-workers",
       "menuLabel": ["사용자 관리", "사용자(매장) 리스트"],
-      "sidebarOrder": 21
+      "sidebarOrder": 22
     },
     {
       "path": "/vendors",
       "menuLabel": ["협력사 관리", "협력사 리스트"],
-      "sidebarOrder": 22
+      "sidebarOrder": 23
     },
     {
       "path": "/vendors/vendor-histories",
       "menuLabel": ["협력사 관리", "협력사 운영 이력"],
-      "sidebarOrder": 22
+      "sidebarOrder": 23
     },
     {
       "path": "/vendors/makers",
       "menuLabel": ["협력사 관리", "제조사 리스트"],
-      "sidebarOrder": 22
+      "sidebarOrder": 23
     },
     {
       "path": "/customer-qa/suggest-system",
       "menuLabel": ["고객 문의 관리", "시스템 개선 제안"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/customer-qa/boss-qa",
       "menuLabel": ["고객 문의 관리", "포장보스 문의"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
+    },
+    {
+      "path": "/claims",
+      "menuLabel": ["고객 문의 관리", "클레임 보상 내역"],
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/requested",
       "menuLabel": ["고객 문의 관리", "신규 교환/반품/기타문의"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/accepted",
       "menuLabel": ["고객 문의 관리", "교환/반품/기타문의 접수"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/reject",
       "menuLabel": ["고객 문의 관리", "교환/반품/기타문의 반려"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/change-pending",
       "menuLabel": ["고객 문의 관리", "교환 대기"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/change-success",
       "menuLabel": ["고객 문의 관리", "교환 확정"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/collected-inspect",
       "menuLabel": ["고객 문의 관리", "반품 회수 및 검수"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/refund-pending",
       "menuLabel": ["고객 문의 관리", "반품 환불 대기"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/refund-success",
       "menuLabel": ["고객 문의 관리", "반품 환불 완료"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/stock-included-requested",
       "menuLabel": ["고객 문의 관리", "반품 재고 재포함"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/refund-question/boss/all",
       "menuLabel": ["고객 문의 관리", "전체 주문 문의"],
-      "sidebarOrder": 23
+      "sidebarOrder": 24
     },
     {
       "path": "/notices/boss-to-hq",
@@ -926,7 +1036,7 @@
         "포장보스 공지사항",
         "포장보스 → 가맹본부 공지"
       ],
-      "sidebarOrder": 24
+      "sidebarOrder": 25
     },
     {
       "path": "/notices/boss-to-user",
@@ -935,22 +1045,12 @@
         "포장보스 공지사항",
         "포장보스 → 매장 공지"
       ],
-      "sidebarOrder": 24
-    },
-    {
-      "path": "/notices/hq-to-user",
-      "menuLabel": ["커뮤니케이션", "가맹본부 공지사항"],
-      "sidebarOrder": 24
-    },
-    {
-      "path": "/brand-store-requests",
-      "menuLabel": ["커뮤니케이션", "매장 요청 리스트"],
-      "sidebarOrder": 24
+      "sidebarOrder": 25
     },
     {
       "path": "/banners",
       "menuLabel": ["커뮤니케이션", "포장보스 배너"],
-      "sidebarOrder": 24
+      "sidebarOrder": 25
     },
     {
       "path": "/hq-popups",
@@ -959,7 +1059,7 @@
         "포장보스 팝업",
         "포장보스 → 가맹본부 팝업 관리"
       ],
-      "sidebarOrder": 24
+      "sidebarOrder": 25
     },
     {
       "path": "/popups",
@@ -968,7 +1068,7 @@
         "포장보스 팝업",
         "포장보스 → 매장 팝업 관리"
       ],
-      "sidebarOrder": 24
+      "sidebarOrder": 25
     }
   ]
 }
