@@ -942,6 +942,11 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "기타 가이드",
+      items: [{ type: "doc", id: "guides-by-manual/index", label: "설명" }],
+    },
   ],
 };
 
