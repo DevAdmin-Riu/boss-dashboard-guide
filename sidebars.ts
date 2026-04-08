@@ -954,7 +954,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "guides-by-manual/auto-consignment/index",
-          label: "자동 위탁 관리 메뉴얼",
+          label: "자동 위탁 관리 매뉴얼",
         },
       ],
     },
