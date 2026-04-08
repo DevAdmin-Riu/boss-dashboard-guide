@@ -640,62 +640,62 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-    "type": "category",
-    "label": "링커스",
-    "items": [
-      {
-        "type": "doc",
-        "id": "notices/hq-to-user/index",
-        "label": "가맹본부 공지사항"
-      },
-      {
-        "type": "doc",
-        "id": "brand-store-requests/index",
-        "label": "매장 요청 리스트"
-      },
-      {
-        "type": "doc",
-        "id": "training-docs/operation-manual/index",
-        "label": "운영 매뉴얼"
-      },
-      {
-        "type": "doc",
-        "id": "training-docs/menu-recipe/index",
-        "label": "메뉴 레시피"
-      },
-      {
-        "type": "doc",
-        "id": "brand-stores/ops-check/templates/index",
-        "label": "점검 양식"
-      },
-      {
-        "type": "category",
-        "label": "점검 보고서",
-        "items": [
-          {
-            "type": "doc",
-            "id": "brand-stores/ops-check/reports/dashboard/index",
-            "label": "대시보드"
-          },
-          {
-            "type": "doc",
-            "id": "brand-stores/ops-check/reports/list/index",
-            "label": "보고서 리스트"
-          }
-        ]
-      },
-      {
-        "type": "doc",
-        "id": "brand-stores/ops-check/recheck_report_items/index",
-        "label": "재점검"
-      },
-      {
-        "type": "doc",
-        "id": "brand-stores/ops-check/consultations/index",
-        "label": "상담 내역"
-      }
-    ]
-  },
+      type: "category",
+      label: "링커스",
+      items: [
+        {
+          type: "doc",
+          id: "notices/hq-to-user/index",
+          label: "가맹본부 공지사항",
+        },
+        {
+          type: "doc",
+          id: "brand-store-requests/index",
+          label: "매장 요청 리스트",
+        },
+        {
+          type: "doc",
+          id: "training-docs/operation-manual/index",
+          label: "운영 매뉴얼",
+        },
+        {
+          type: "doc",
+          id: "training-docs/menu-recipe/index",
+          label: "메뉴 레시피",
+        },
+        {
+          type: "doc",
+          id: "brand-stores/ops-check/templates/index",
+          label: "점검 양식",
+        },
+        {
+          type: "category",
+          label: "점검 보고서",
+          items: [
+            {
+              type: "doc",
+              id: "brand-stores/ops-check/reports/dashboard/index",
+              label: "대시보드",
+            },
+            {
+              type: "doc",
+              id: "brand-stores/ops-check/reports/list/index",
+              label: "보고서 리스트",
+            },
+          ],
+        },
+        {
+          type: "doc",
+          id: "brand-stores/ops-check/recheck_report_items/index",
+          label: "재점검",
+        },
+        {
+          type: "doc",
+          id: "brand-stores/ops-check/consultations/index",
+          label: "상담 내역",
+        },
+      ],
+    },
     {
       type: "category",
       label: "B2B",
@@ -871,77 +871,93 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-      {
-    "type": "category",
-    "label": "고객 문의 관리",
-    "items": [
-      {
-        "type": "doc",
-        "id": "customer-qa/suggest-system/index",
-        "label": "시스템 개선 제안"
-      },
-      {
-        "type": "doc",
-        "id": "customer-qa/boss-qa/index",
-        "label": "포장보스 문의"
-      },
-      {
-        "type": "doc",
-        "id": "claims/index",
-        "label": "클레임 보상 내역"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/requested/index",
-        "label": "신규 교환/반품/기타문의"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/accepted/index",
-        "label": "교환/반품/기타문의 접수"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/reject/index",
-        "label": "교환/반품/기타문의 반려"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/change-pending/index",
-        "label": "교환 대기"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/change-success/index",
-        "label": "교환 확정"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/collected-inspect/index",
-        "label": "반품 회수 및 검수"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/refund-pending/index",
-        "label": "반품 환불 대기"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/refund-success/index",
-        "label": "반품 환불 완료"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/stock-included-requested/index",
-        "label": "반품 재고 재포함"
-      },
-      {
-        "type": "doc",
-        "id": "refund-question/boss/all/index",
-        "label": "전체 주문 문의"
-      }
-    ]
-  },
+    {
+      type: "category",
+      label: "고객 문의 관리",
+      items: [
+        {
+          type: "doc",
+          id: "customer-qa/suggest-system/index",
+          label: "시스템 개선 제안",
+        },
+        {
+          type: "doc",
+          id: "customer-qa/boss-qa/index",
+          label: "포장보스 문의",
+        },
+        {
+          type: "doc",
+          id: "claims/index",
+          label: "클레임 보상 내역",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/requested/index",
+          label: "신규 교환/반품/기타문의",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/accepted/index",
+          label: "교환/반품/기타문의 접수",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/reject/index",
+          label: "교환/반품/기타문의 반려",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/change-pending/index",
+          label: "교환 대기",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/change-success/index",
+          label: "교환 확정",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/collected-inspect/index",
+          label: "반품 회수 및 검수",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/refund-pending/index",
+          label: "반품 환불 대기",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/refund-success/index",
+          label: "반품 환불 완료",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/stock-included-requested/index",
+          label: "반품 재고 재포함",
+        },
+        {
+          type: "doc",
+          id: "refund-question/boss/all/index",
+          label: "전체 주문 문의",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "기타 가이드",
+      items: [
+        {
+          type: "doc",
+          id: "guides-by-manual/index",
+          label: "설명",
+        },
+        {
+          type: "doc",
+          id: "guides-by-manual/auto-consignment/index",
+          label: "자동 위탁 관리 메뉴얼",
+        },
+      ],
+    },
   ],
 };
 
