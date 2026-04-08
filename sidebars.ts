@@ -945,7 +945,18 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "기타 가이드",
-      items: [{ type: "doc", id: "guides-by-manual/index", label: "설명" }],
+      items: [
+        {
+          type: "doc",
+          id: "guides-by-manual/index",
+          label: "설명",
+        },
+        {
+          type: "doc",
+          id: "guides-by-manual/auto-consignment/index",
+          label: "자동 위탁 관리 메뉴얼",
+        },
+      ],
     },
   ],
 };
