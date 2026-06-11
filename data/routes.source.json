@@ -20,8 +20,8 @@
       "sidebarOrder": 1
     },
     {
-      "path": "/brand-products/boss",
-      "menuLabel": ["상품 관리", "상품 리스트", "보스 상품"],
+      "path": "/brand-products/display-item",
+      "menuLabel": ["상품 관리", "상품 리스트", "보스+세트 상품"],
       "sidebarOrder": 2
     },
     {
@@ -32,11 +32,6 @@
     {
       "path": "/brand-products/b2b",
       "menuLabel": ["상품 관리", "상품 리스트", "B2B 상품"],
-      "sidebarOrder": 2
-    },
-    {
-      "path": "/brand-products/bundle",
-      "menuLabel": ["상품 관리", "상품 리스트", "세트 상품"],
       "sidebarOrder": 2
     },
     {
@@ -425,6 +420,11 @@
       "sidebarOrder": 10
     },
     {
+      "path": "/stats/consignment-po/by-vendor",
+      "menuLabel": ["배송 관리", "위탁 배송 통계"],
+      "sidebarOrder": 10
+    },
+    {
       "path": "/orders/sales/unified/boss",
       "menuLabel": ["매출 정산 관리", "매출 정산 내역", "보스 상품"],
       "sidebarOrder": 11
@@ -597,6 +597,11 @@
     {
       "path": "/brands/exclusive-variant-stock-info",
       "menuLabel": ["브랜드 몰 관리", "브랜드 별 전용/악성 재고 현황"],
+      "sidebarOrder": 16
+    },
+    {
+      "path": "/brands/deposits",
+      "menuLabel": ["브랜드 몰 관리", "보증 금액 관리"],
       "sidebarOrder": 16
     },
     {
@@ -980,6 +985,11 @@
       "sidebarOrder": 23
     },
     {
+      "path": "/cfp",
+      "menuLabel": ["협력사 관리", "탄소배출량 현황"],
+      "sidebarOrder": 23
+    },
+    {
       "path": "/customer-qa/suggest-system",
       "menuLabel": ["고객 문의 관리", "시스템 개선 제안"],
       "sidebarOrder": 24
@@ -1056,7 +1066,12 @@
     },
     {
       "path": "/banners",
-      "menuLabel": ["커뮤니케이션", "포장보스 배너"],
+      "menuLabel": ["커뮤니케이션", "포장보스 배너", "배너 관리"],
+      "sidebarOrder": 25
+    },
+    {
+      "path": "/admin-banners",
+      "menuLabel": ["커뮤니케이션", "포장보스 배너", "Admin 배너"],
       "sidebarOrder": 25
     },
     {
@@ -1067,6 +1082,11 @@
     {
       "path": "/popups",
       "menuLabel": ["커뮤니케이션", "포장보스 팝업", "포장보스 → 매장 팝업 관리"],
+      "sidebarOrder": 25
+    },
+    {
+      "path": "/admin-popups",
+      "menuLabel": ["커뮤니케이션", "포장보스 팝업", "Admin 팝업"],
       "sidebarOrder": 25
     }
   ]
