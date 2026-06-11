@@ -404,6 +404,74 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "매출 정산 관리",
+      items: [
+        {
+          type: "category",
+          label: "매출 정산 내역",
+          items: [
+            {
+              type: "doc",
+              id: "orders/sales/unified/boss/index",
+              label: "보스 상품",
+            },
+            {
+              type: "doc",
+              id: "orders/sales/unified/vendor/index",
+              label: "직거래 상품",
+            },
+          ],
+        },
+        {
+          type: "doc",
+          id: "taxinvoice/unified/index",
+          label: "세금계산서",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "매입 정산 관리",
+      items: [
+        {
+          type: "doc",
+          id: "purchases/boss/all-status/index",
+          label: "전체 매입 내역",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/standby-or-pending/index",
+          label: "매입 정산 대기",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/revision/index",
+          label: "정산 수정 필요",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/pending/index",
+          label: "협력사 매입 확정 대기 (대행 가능)",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/closed/index",
+          label: "매입 정산 완료",
+        },
+        {
+          type: "doc",
+          id: "purchases/vendor/all-status/index",
+          label: "직거래 상품 매입 내역",
+        },
+        {
+          type: "doc",
+          id: "stats/purchases/vendor/index",
+          label: "월별 매입 내역",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "본부수익금 정산 관리",
       items: [
         {
@@ -413,7 +481,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "settlement/mileage/confirmed-or-reviewing-by-admin/index",
+          id: "settlement/mileage/confirmed/index",
+          label: "본부수익금 확정",
+        },
+        {
+          type: "doc",
+          id: "settlement/mileage/reviewing-by-admin/index",
           label: "본부수익금 지급검토",
         },
         {
@@ -468,7 +541,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "settlement/royalty/confirmed-or-reviewing-by-admin/index",
+              id: "settlement/royalty/confirmed/index",
+              label: "확정",
+            },
+            {
+              type: "doc",
+              id: "settlement/royalty/reviewing-by-admin/index",
               label: "지급검토",
             },
             {
@@ -598,7 +676,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "settlement/fbv/confirmed-or-reviewing-by-admin/index",
+          id: "settlement/fbv/confirmed/index",
+          label: "직거래 상품 대금 확정",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/reviewing-by-admin/index",
           label: "직거래 상품 대금 지급검토",
         },
         {
@@ -703,7 +786,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "b2b/purchase-order/lines/consignment/b2b-all-status/index",
-          label: "B2B 납기 리스트",
+          label: "B2B 대시보드",
         },
         {
           type: "category",
@@ -799,22 +882,27 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "b2b/settlement/in-progress/index",
-              label: "매출 정산",
+              label: "매출 정산 대기",
             },
             {
               type: "doc",
               id: "b2b/settlement/edit-request/index",
-              label: "수정 요청",
+              label: "정산 수정 필요",
             },
             {
               type: "doc",
               id: "b2b/settlement/closing-statement/index",
-              label: "마감명세서 발송",
+              label: "마감명세서 발송 대기",
             },
             {
               type: "doc",
               id: "b2b/settlement/pending/index",
-              label: "대행 매출 확정",
+              label: "고객사 매출 확정 대기(대행 가능)",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/confirmed/index",
+              label: "매출 확정",
             },
             {
               type: "doc",
@@ -824,7 +912,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "b2b/settlement/closed/index",
-              label: "매출 마감",
+              label: "매출 정산 완료",
             },
           ],
         },
@@ -835,27 +923,43 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "category",
+          label: "매출 거래원장",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/sales-ledgers/index",
+              label: "단일 거래처 조회",
+            },
+            {
+              type: "doc",
+              id: "b2b/sales-ledgers/multiple/index",
+              label: "복수 거래처 조회",
+            },
+          ],
+        },
+        {
+          type: "category",
           label: "매입 정산",
           items: [
             {
               type: "doc",
               id: "b2b/purchases/boss/standby-or-pending/index",
-              label: "매입 정산",
+              label: "매입 정산 대기",
             },
             {
               type: "doc",
               id: "b2b/purchases/boss/revision/index",
-              label: "매입 수정 요청",
+              label: "정산 수정 필요",
             },
             {
               type: "doc",
               id: "b2b/purchases/boss/pending/index",
-              label: "대행 매입 확정",
+              label: "협력사 매입 확정 대기 (대행 가능)",
             },
             {
               type: "doc",
               id: "b2b/purchases/boss/closed/index",
-              label: "매입 마감",
+              label: "매입 정산 완료",
             },
             {
               type: "doc",
@@ -868,6 +972,22 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "b2b/stats/purchases/vendor/index",
           label: "월별 매입 내역",
+        },
+        {
+          type: "category",
+          label: "매입 거래원장",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/purchase-ledgers/index",
+              label: "단일 거래처 조회",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-ledgers/multiple/index",
+              label: "복수 거래처 조회",
+            },
+          ],
         },
       ],
     },

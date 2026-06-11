@@ -1,6 +1,6 @@
 ---
-title: B2B > 매입 정산 > 협력사 매입 확정 대기 (대행 가능)
-slug: /b2b/purchases/boss/pending
+title: 매입 정산 관리 > 협력사 매입 확정 대기 (대행 가능)
+slug: /purchases/boss/pending
 sidebar_position: 20
 ---
 

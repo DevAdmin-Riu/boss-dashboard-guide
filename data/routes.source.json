@@ -1,6 +1,6 @@
 {
   "__meta": {
-    "lastUpdated": "2026-04-02",
+    "lastUpdated": "2026-06-11",
     "note": "Codex로 generated/routes.json 파일을 매번 생성하면 비용/시간이 커서, routes.json 원본을 Git에 보관합니다. 서비스의 메뉴 구조가 변경되면 routes 내용에도 반영이 필요하고, 가이드 생성 시에는 필요한 path만 추려 generated/routes.json으로 복사해 사용하세요."
   },
   "routes": [
@@ -425,68 +425,43 @@
       "sidebarOrder": 10
     },
     {
-      "path": "/orders/sales/by-user/boss",
-      "menuLabel": ["매출 정산 관리", "일반 매출 정산 내역", "보스 상품"],
+      "path": "/orders/sales/unified/boss",
+      "menuLabel": ["매출 정산 관리", "매출 정산 내역", "보스 상품"],
       "sidebarOrder": 11
     },
     {
-      "path": "/orders/sales/by-user/vendor",
-      "menuLabel": ["매출 정산 관리", "일반 매출 정산 내역", "직거래 상품"],
+      "path": "/orders/sales/unified/vendor",
+      "menuLabel": ["매출 정산 관리", "매출 정산 내역", "직거래 상품"],
       "sidebarOrder": 11
     },
     {
-      "path": "/taxinvoice/regular",
-      "menuLabel": ["매출 정산 관리", "일반 세금계산서"],
+      "path": "/taxinvoice/unified",
+      "menuLabel": ["매출 정산 관리", "세금계산서"],
       "sidebarOrder": 11
-    },
-    {
-      "path": "/orders/sales/by-staff-by-brand/boss",
-      "menuLabel": ["매출 정산 관리", "대행 매출 정산 내역", "보스 상품"],
-      "sidebarOrder": 11
-    },
-    {
-      "path": "/orders/sales/by-staff-by-brand/vendor",
-      "menuLabel": ["매출 정산 관리", "대행 매출 정산 내역", "직거래 상품"],
-      "sidebarOrder": 11
-    },
-    {
-      "path": "/taxinvoice/agency",
-      "menuLabel": ["매출 정산 관리", "대행 세금계산서"],
-      "sidebarOrder": 11
-    },
-    {
-      "path": "/orders/sales/by-staff-for-bad-stock/boss",
-      "menuLabel": ["매출 정산 관리", "오픈몰 매출 정산 내역", "보스 상품"],
-      "sidebarOrder": 11
-    },
-    {
-      "path": "/orders/sales/by-staff-for-bad-stock/vendor",
-      "menuLabel": ["매출 정산 관리", "오픈몰 매출 정산 내역", "직거래 상품"],
-      "sidebarOrder": 11
-    },
-    {
-      "path": "/purchases/boss/standby-or-pending",
-      "menuLabel": ["매입 정산 관리", "매입 정산"],
-      "sidebarOrder": 12
-    },
-    {
-      "path": "/purchases/boss/revision",
-      "menuLabel": ["매입 정산 관리", "매입 수정 요청"],
-      "sidebarOrder": 12
-    },
-    {
-      "path": "/purchases/boss/pending",
-      "menuLabel": ["매입 정산 관리", "대행 매입 확정"],
-      "sidebarOrder": 12
-    },
-    {
-      "path": "/purchases/boss/closed",
-      "menuLabel": ["매입 정산 관리", "매입 마감"],
-      "sidebarOrder": 12
     },
     {
       "path": "/purchases/boss/all-status",
       "menuLabel": ["매입 정산 관리", "전체 매입 내역"],
+      "sidebarOrder": 12
+    },
+    {
+      "path": "/purchases/boss/standby-or-pending",
+      "menuLabel": ["매입 정산 관리", "매입 정산 대기"],
+      "sidebarOrder": 12
+    },
+    {
+      "path": "/purchases/boss/revision",
+      "menuLabel": ["매입 정산 관리", "정산 수정 필요"],
+      "sidebarOrder": 12
+    },
+    {
+      "path": "/purchases/boss/pending",
+      "menuLabel": ["매입 정산 관리", "협력사 매입 확정 대기 (대행 가능)"],
+      "sidebarOrder": 12
+    },
+    {
+      "path": "/purchases/boss/closed",
+      "menuLabel": ["매입 정산 관리", "매입 정산 완료"],
       "sidebarOrder": 12
     },
     {
@@ -505,7 +480,12 @@
       "sidebarOrder": 13
     },
     {
-      "path": "/settlement/mileage/confirmed-or-reviewing-by-admin",
+      "path": "/settlement/mileage/confirmed",
+      "menuLabel": ["본부수익금 정산 관리", "본부수익금 확정"],
+      "sidebarOrder": 13
+    },
+    {
+      "path": "/settlement/mileage/reviewing-by-admin",
       "menuLabel": ["본부수익금 정산 관리", "본부수익금 지급검토"],
       "sidebarOrder": 13
     },
@@ -590,7 +570,12 @@
       "sidebarOrder": 16
     },
     {
-      "path": "/settlement/royalty/confirmed-or-reviewing-by-admin",
+      "path": "/settlement/royalty/confirmed",
+      "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "확정"],
+      "sidebarOrder": 16
+    },
+    {
+      "path": "/settlement/royalty/reviewing-by-admin",
       "menuLabel": ["브랜드 몰 관리", "본부 로열티 정산", "지급검토"],
       "sidebarOrder": 16
     },
@@ -700,7 +685,12 @@
       "sidebarOrder": 18
     },
     {
-      "path": "/settlement/fbv/confirmed-or-reviewing-by-admin",
+      "path": "/settlement/fbv/confirmed",
+      "menuLabel": ["발주원", "직거래 상품 대금 확정"],
+      "sidebarOrder": 18
+    },
+    {
+      "path": "/settlement/fbv/reviewing-by-admin",
       "menuLabel": ["발주원", "직거래 상품 대금 지급검토"],
       "sidebarOrder": 18
     },
@@ -781,7 +771,7 @@
     },
     {
       "path": "/b2b/purchase-order/lines/consignment/b2b-all-status",
-      "menuLabel": ["B2B", "B2B 납기 리스트"],
+      "menuLabel": ["B2B", "B2B 대시보드"],
       "sidebarOrder": 20
     },
     {
@@ -856,27 +846,32 @@
     },
     {
       "path": "/b2b/settlement/in-progress",
-      "menuLabel": ["B2B", "매출 정산", "매출 정산"],
+      "menuLabel": ["B2B", "매출 정산", "매출 정산 대기"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/edit-request",
-      "menuLabel": ["B2B", "매출 정산", "수정 요청"],
+      "menuLabel": ["B2B", "매출 정산", "정산 수정 필요"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/closing-statement",
-      "menuLabel": ["B2B", "매출 정산", "마감명세서 발송"],
+      "menuLabel": ["B2B", "매출 정산", "마감명세서 발송 대기"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/pending",
-      "menuLabel": ["B2B", "매출 정산", "대행 매출 확정"],
+      "menuLabel": ["B2B", "매출 정산", "고객사 매출 확정 대기(대행 가능)"],
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/settlement/confirmed",
+      "menuLabel": ["B2B", "매출 정산", "매출 확정"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/settlement/closed",
-      "menuLabel": ["B2B", "매출 정산", "매출 마감"],
+      "menuLabel": ["B2B", "매출 정산", "매출 정산 완료"],
       "sidebarOrder": 20
     },
     {
@@ -895,23 +890,33 @@
       "sidebarOrder": 20
     },
     {
+      "path": "/b2b/sales-ledgers",
+      "menuLabel": ["B2B", "매출 거래원장", "단일 거래처 조회"],
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/sales-ledgers/multiple",
+      "menuLabel": ["B2B", "매출 거래원장", "복수 거래처 조회"],
+      "sidebarOrder": 20
+    },
+    {
       "path": "/b2b/purchases/boss/standby-or-pending",
-      "menuLabel": ["B2B", "매입 정산", "매입 정산"],
+      "menuLabel": ["B2B", "매입 정산", "매입 정산 대기"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/revision",
-      "menuLabel": ["B2B", "매입 정산", "매입 수정 요청"],
+      "menuLabel": ["B2B", "매입 정산", "정산 수정 필요"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/closed",
-      "menuLabel": ["B2B", "매입 정산", "매입 마감"],
+      "menuLabel": ["B2B", "매입 정산", "매입 정산 완료"],
       "sidebarOrder": 20
     },
     {
       "path": "/b2b/purchases/boss/pending",
-      "menuLabel": ["B2B", "매입 정산", "대행 매입 확정"],
+      "menuLabel": ["B2B", "매입 정산", "협력사 매입 확정 대기 (대행 가능)"],
       "sidebarOrder": 20
     },
     {
@@ -922,6 +927,16 @@
     {
       "path": "/b2b/stats/purchases/vendor",
       "menuLabel": ["B2B", "월별 매입 내역"],
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/purchase-ledgers",
+      "menuLabel": ["B2B", "매입 거래원장", "단일 거래처 조회"],
+      "sidebarOrder": 20
+    },
+    {
+      "path": "/b2b/purchase-ledgers/multiple",
+      "menuLabel": ["B2B", "매입 거래원장", "복수 거래처 조회"],
       "sidebarOrder": 20
     },
     {
@@ -1031,20 +1046,12 @@
     },
     {
       "path": "/notices/boss-to-hq",
-      "menuLabel": [
-        "커뮤니케이션",
-        "포장보스 공지사항",
-        "포장보스 → 가맹본부 공지"
-      ],
+      "menuLabel": ["커뮤니케이션", "포장보스 공지사항", "포장보스 → 가맹본부 공지"],
       "sidebarOrder": 25
     },
     {
       "path": "/notices/boss-to-user",
-      "menuLabel": [
-        "커뮤니케이션",
-        "포장보스 공지사항",
-        "포장보스 → 매장 공지"
-      ],
+      "menuLabel": ["커뮤니케이션", "포장보스 공지사항", "포장보스 → 매장 공지"],
       "sidebarOrder": 25
     },
     {
@@ -1054,20 +1061,12 @@
     },
     {
       "path": "/hq-popups",
-      "menuLabel": [
-        "커뮤니케이션",
-        "포장보스 팝업",
-        "포장보스 → 가맹본부 팝업 관리"
-      ],
+      "menuLabel": ["커뮤니케이션", "포장보스 팝업", "포장보스 → 가맹본부 팝업 관리"],
       "sidebarOrder": 25
     },
     {
       "path": "/popups",
-      "menuLabel": [
-        "커뮤니케이션",
-        "포장보스 팝업",
-        "포장보스 → 매장 팝업 관리"
-      ],
+      "menuLabel": ["커뮤니케이션", "포장보스 팝업", "포장보스 → 매장 팝업 관리"],
       "sidebarOrder": 25
     }
   ]

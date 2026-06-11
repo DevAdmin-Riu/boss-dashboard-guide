@@ -1,6 +1,6 @@
 ---
-title: B2B > 매입 정산 > 매입 정산 완료
-slug: /b2b/purchases/boss/closed
+title: 매입 정산 관리 > 매입 정산 완료
+slug: /purchases/boss/closed
 sidebar_position: 20
 ---
 
@@ -23,7 +23,7 @@ sidebar_position: 20
 
 #### 발생 가능한 실수 / 유의사항
 
-- 마감된 내역의 수정이 필요하면 먼저 "정산 완료 취소"로 마감을 되돌린 뒤 진행한다.
+- 완료된 내역의 수정이 필요하면 먼저 "정산 완료 취소"로 마감을 되돌린 뒤 진행한다.
 
 ---
 

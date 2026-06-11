@@ -1,6 +1,6 @@
 ---
-title: B2B > 매입 정산 > 매입 정산 대기
-slug: /b2b/purchases/boss/standby-or-pending
+title: 매입 정산 관리 > 매입 정산 대기
+slug: /purchases/boss/standby-or-pending
 sidebar_position: 20
 ---
 
@@ -8,7 +8,7 @@ sidebar_position: 20
 
 ## 페이지 설명
 
-대행 매입 정산 대상을 확인하고 매입 내역 수정 및 확정 요청을 진행한다.
+매입 정산 대기 내역을 확인하고 매입 내역 수정 및 확정 요청을 진행한다.
 
 ## 이 페이지에서 가능한 기능들
 
