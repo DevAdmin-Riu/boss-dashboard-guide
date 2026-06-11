@@ -10,6 +10,16 @@
       "sidebarOrder": 1
     },
     {
+      "path": "/products/single-brand-assigned-pvs",
+      "menuLabel": ["제품 관리", "단독 판매 제품"],
+      "sidebarOrder": 1
+    },
+    {
+      "path": "/products/unassigned-pvs",
+      "menuLabel": ["제품 관리", "미진열 제품"],
+      "sidebarOrder": 1
+    },
+    {
       "path": "/categories",
       "menuLabel": ["제품 관리", "카테고리"],
       "sidebarOrder": 1
