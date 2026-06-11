@@ -21,6 +21,79 @@ const sidebars: SidebarsConfig = {
     "intro",
     {
       type: "category",
+      label: "제품 관리",
+      items: [
+        {
+          type: "doc",
+          id: "products/type-a/index",
+          label: "제품",
+        },
+        {
+          type: "doc",
+          id: "products/single-brand-assigned-pvs/index",
+          label: "단독 판매 제품",
+        },
+        {
+          type: "doc",
+          id: "products/unassigned-pvs/index",
+          label: "미진열 제품",
+        },
+        {
+          type: "doc",
+          id: "categories/index",
+          label: "카테고리",
+        },
+        {
+          type: "doc",
+          id: "products/variant-manage-events/index",
+          label: "제품 관리 이력",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "상품 관리",
+      items: [
+        {
+          type: "category",
+          label: "상품 리스트",
+          items: [
+            {
+              type: "doc",
+              id: "brand-products/display-item/index",
+              label: "보스+세트 상품",
+            },
+            {
+              type: "doc",
+              id: "brand-products/fbv/index",
+              label: "직거래 상품",
+            },
+            {
+              type: "doc",
+              id: "brand-products/b2b/index",
+              label: "B2B 상품",
+            },
+            {
+              type: "doc",
+              id: "brand-products/package/index",
+              label: "패키지 상품",
+            },
+            {
+              type: "doc",
+              id: "brand-products/bpv-collection/index",
+              label: "상품 그룹",
+            },
+          ],
+        },
+        {
+          type: "doc",
+          id: "brand-products/variant-manage-events/index",
+          label: "상품 관리 이력",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "견적 관리",
       items: [
         {
@@ -134,6 +207,47 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "purchase-order/lines/track-inventory/all-status/index",
           label: "전체 발주 내역",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "재고 관리",
+      items: [
+        {
+          type: "doc",
+          id: "stock/type-a/index",
+          label: "재고 현황",
+        },
+        {
+          type: "doc",
+          id: "stock/type-b/index",
+          label: "재고 조정",
+        },
+        {
+          type: "doc",
+          id: "stock/monthly-stock-snapshots/index",
+          label: "월별 재고 현황",
+        },
+        {
+          type: "doc",
+          id: "stock/rack-stocks/index",
+          label: "로케이션 상세 재고",
+        },
+        {
+          type: "doc",
+          id: "stock/labels/product-variants/index",
+          label: "재고 라벨 출력",
+        },
+        {
+          type: "doc",
+          id: "stock/labels/stock-detail-events/index",
+          label: "입고 라벨 출력",
+        },
+        {
+          type: "doc",
+          id: "stock/po-line-inspect/index",
+          label: "입고 검수 내역",
         },
       ],
     },
@@ -400,6 +514,79 @@ const sidebars: SidebarsConfig = {
           id: "shipping-info/statistics/index",
           label: "택배 발송 통계",
         },
+        {
+          type: "doc",
+          id: "stats/consignment-po/by-vendor/index",
+          label: "위탁 배송 통계",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "매출 정산 관리",
+      items: [
+        {
+          type: "category",
+          label: "매출 정산 내역",
+          items: [
+            {
+              type: "doc",
+              id: "orders/sales/unified/boss/index",
+              label: "보스 상품",
+            },
+            {
+              type: "doc",
+              id: "orders/sales/unified/vendor/index",
+              label: "직거래 상품",
+            },
+          ],
+        },
+        {
+          type: "doc",
+          id: "taxinvoice/unified/index",
+          label: "세금계산서",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "매입 정산 관리",
+      items: [
+        {
+          type: "doc",
+          id: "purchases/boss/all-status/index",
+          label: "전체 매입 내역",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/standby-or-pending/index",
+          label: "매입 정산 대기",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/revision/index",
+          label: "정산 수정 필요",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/pending/index",
+          label: "협력사 매입 확정 대기 (대행 가능)",
+        },
+        {
+          type: "doc",
+          id: "purchases/boss/closed/index",
+          label: "매입 정산 완료",
+        },
+        {
+          type: "doc",
+          id: "purchases/vendor/all-status/index",
+          label: "직거래 상품 매입 내역",
+        },
+        {
+          type: "doc",
+          id: "stats/purchases/vendor/index",
+          label: "월별 매입 내역",
+        },
       ],
     },
     {
@@ -413,7 +600,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "settlement/mileage/confirmed-or-reviewing-by-admin/index",
+          id: "settlement/mileage/confirmed/index",
+          label: "본부수익금 확정",
+        },
+        {
+          type: "doc",
+          id: "settlement/mileage/reviewing-by-admin/index",
           label: "본부수익금 지급검토",
         },
         {
@@ -430,6 +622,58 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "settlement/mileage/all-status/index",
           label: "본부수익금 전체보기",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "실적 관리",
+      items: [
+        {
+          type: "doc",
+          id: "stats/sales/index",
+          label: "월별 매출",
+        },
+        {
+          type: "doc",
+          id: "stats/sales-diff/index",
+          label: "기간별 실적 비교",
+        },
+        {
+          type: "doc",
+          id: "stats/sales/product/index",
+          label: "제품 판매 실적(월별)",
+        },
+        {
+          type: "doc",
+          id: "stats/sales-diff/product/index",
+          label: "제품 판매 실적(기간별)",
+        },
+        {
+          type: "doc",
+          id: "stats/sales/product/brand/index",
+          label: "제품 판매 실적(브랜드별)",
+        },
+        {
+          type: "doc",
+          id: "stats/riu-minus-profit-bpvs/index",
+          label: "마이너스 수익 품목",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "프로모션/마케팅",
+      items: [
+        {
+          type: "doc",
+          id: "collections/index",
+          label: "컬렉션",
+        },
+        {
+          type: "doc",
+          id: "product-ci/index",
+          label: "공통 상세페이지 관리",
         },
       ],
     },
@@ -468,7 +712,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "settlement/royalty/confirmed-or-reviewing-by-admin/index",
+              id: "settlement/royalty/confirmed/index",
+              label: "확정",
+            },
+            {
+              type: "doc",
+              id: "settlement/royalty/reviewing-by-admin/index",
               label: "지급검토",
             },
             {
@@ -492,6 +741,11 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "brands/exclusive-variant-stock-info/index",
           label: "브랜드 별 전용/악성 재고 현황",
+        },
+        {
+          type: "doc",
+          id: "brands/deposits/index",
+          label: "보증 금액 관리",
         },
         {
           type: "doc",
@@ -598,7 +852,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "settlement/fbv/confirmed-or-reviewing-by-admin/index",
+          id: "settlement/fbv/confirmed/index",
+          label: "직거래 상품 대금 확정",
+        },
+        {
+          type: "doc",
+          id: "settlement/fbv/reviewing-by-admin/index",
           label: "직거래 상품 대금 지급검토",
         },
         {
@@ -703,7 +962,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "b2b/purchase-order/lines/consignment/b2b-all-status/index",
-          label: "B2B 납기 리스트",
+          label: "B2B 대시보드",
         },
         {
           type: "category",
@@ -799,22 +1058,27 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "b2b/settlement/in-progress/index",
-              label: "매출 정산",
+              label: "매출 정산 대기",
             },
             {
               type: "doc",
               id: "b2b/settlement/edit-request/index",
-              label: "수정 요청",
+              label: "정산 수정 필요",
             },
             {
               type: "doc",
               id: "b2b/settlement/closing-statement/index",
-              label: "마감명세서 발송",
+              label: "마감명세서 발송 대기",
             },
             {
               type: "doc",
               id: "b2b/settlement/pending/index",
-              label: "대행 매출 확정",
+              label: "고객사 매출 확정 대기(대행 가능)",
+            },
+            {
+              type: "doc",
+              id: "b2b/settlement/confirmed/index",
+              label: "매출 확정",
             },
             {
               type: "doc",
@@ -824,7 +1088,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "b2b/settlement/closed/index",
-              label: "매출 마감",
+              label: "매출 정산 완료",
             },
           ],
         },
@@ -835,27 +1099,43 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "category",
+          label: "매출 거래원장",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/sales-ledgers/index",
+              label: "단일 거래처 조회",
+            },
+            {
+              type: "doc",
+              id: "b2b/sales-ledgers/multiple/index",
+              label: "복수 거래처 조회",
+            },
+          ],
+        },
+        {
+          type: "category",
           label: "매입 정산",
           items: [
             {
               type: "doc",
               id: "b2b/purchases/boss/standby-or-pending/index",
-              label: "매입 정산",
+              label: "매입 정산 대기",
             },
             {
               type: "doc",
               id: "b2b/purchases/boss/revision/index",
-              label: "매입 수정 요청",
+              label: "정산 수정 필요",
             },
             {
               type: "doc",
               id: "b2b/purchases/boss/pending/index",
-              label: "대행 매입 확정",
+              label: "협력사 매입 확정 대기 (대행 가능)",
             },
             {
               type: "doc",
               id: "b2b/purchases/boss/closed/index",
-              label: "매입 마감",
+              label: "매입 정산 완료",
             },
             {
               type: "doc",
@@ -868,6 +1148,85 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "b2b/stats/purchases/vendor/index",
           label: "월별 매입 내역",
+        },
+        {
+          type: "category",
+          label: "매입 거래원장",
+          items: [
+            {
+              type: "doc",
+              id: "b2b/purchase-ledgers/index",
+              label: "단일 거래처 조회",
+            },
+            {
+              type: "doc",
+              id: "b2b/purchase-ledgers/multiple/index",
+              label: "복수 거래처 조회",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "매장 관리",
+      items: [
+        {
+          type: "doc",
+          id: "brand-stores/index",
+          label: "매장 리스트",
+        },
+        {
+          type: "doc",
+          id: "credits/index",
+          label: "충전금 이용 내역",
+        },
+        {
+          type: "doc",
+          id: "rcoins/index",
+          label: "포인트 이용 내역",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "사용자 관리",
+      items: [
+        {
+          type: "doc",
+          id: "customers/hq-staff/index",
+          label: "사용자(가맹본부) 리스트",
+        },
+        {
+          type: "doc",
+          id: "customers/store-workers/index",
+          label: "사용자(매장) 리스트",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "협력사 관리",
+      items: [
+        {
+          type: "doc",
+          id: "vendors/index",
+          label: "협력사 리스트",
+        },
+        {
+          type: "doc",
+          id: "vendors/vendor-histories/index",
+          label: "협력사 운영 이력",
+        },
+        {
+          type: "doc",
+          id: "vendors/makers/index",
+          label: "제조사 리스트",
+        },
+        {
+          type: "doc",
+          id: "cfp/index",
+          label: "탄소배출량 현황",
         },
       ],
     },
@@ -944,6 +1303,65 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "커뮤니케이션",
+      items: [
+        {
+          type: "category",
+          label: "포장보스 공지사항",
+          items: [
+            {
+              type: "doc",
+              id: "notices/boss-to-hq/index",
+              label: "포장보스 → 가맹본부 공지",
+            },
+            {
+              type: "doc",
+              id: "notices/boss-to-user/index",
+              label: "포장보스 → 매장 공지",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "포장보스 배너",
+          items: [
+            {
+              type: "doc",
+              id: "banners/index",
+              label: "배너 관리",
+            },
+            {
+              type: "doc",
+              id: "admin-banners/index",
+              label: "Admin 배너",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "포장보스 팝업",
+          items: [
+            {
+              type: "doc",
+              id: "hq-popups/index",
+              label: "포장보스 → 가맹본부 팝업 관리",
+            },
+            {
+              type: "doc",
+              id: "popups/index",
+              label: "포장보스 → 매장 팝업 관리",
+            },
+            {
+              type: "doc",
+              id: "admin-popups/index",
+              label: "Admin 팝업",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "기타 가이드",
       items: [
         {
@@ -954,7 +1372,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "guides-by-manual/auto-consignment/index",
-          label: "자동 위탁 관리 메뉴얼",
+          label: "자동 위탁 관리 매뉴얼",
         },
       ],
     },
