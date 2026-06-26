@@ -1068,7 +1068,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "b2b/settlement/closing-statement/index",
-              label: "마감명세서 발송 대기",
+              label: "월 마감 거래명세서 발송 대기",
             },
             {
               type: "doc",
@@ -1082,15 +1082,20 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "b2b/settlement/taxinvoice/index",
-              label: "매출 세금계산서",
+              id: "b2b/settlement/cutoff/index",
+              label: "매출 정산 완료(발행실패)",
             },
             {
               type: "doc",
               id: "b2b/settlement/closed/index",
-              label: "매출 정산 완료",
+              label: "매출 정산 완료(발행성공)",
             },
           ],
+        },
+        {
+          type: "doc",
+          id: "b2b/payment-requests/index",
+          label: "결제 청구",
         },
         {
           type: "doc",
