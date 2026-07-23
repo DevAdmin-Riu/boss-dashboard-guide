@@ -156,7 +156,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "purchase-order/lines/track-inventory/receive/index",
-          label: "대행 접수",
+          label: "발주 접수",
         },
         {
           type: "doc",
@@ -166,7 +166,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "purchase-order/lines/track-inventory/dispatch-fulfillment/index",
-          label: "대행 출고 지시",
+          label: "출고 지시",
         },
         {
           type: "doc",
@@ -181,7 +181,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "purchase-order/lines/track-inventory/confirm-delivery/index",
-          label: "대행 배송 확정(택배)",
+          label: "수동 배송 확정(택배)",
         },
         {
           type: "doc",
@@ -191,7 +191,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "purchase-order/lines/track-inventory/inspect/index",
-          label: "입고 검수",
+          label: "입고 검수(불량)",
         },
         {
           type: "doc",
@@ -810,6 +810,11 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "orders/delivery-fbv-price-adjust/index",
+              label: "주문 접수 (금액 확정)",
+            },
+            {
+              type: "doc",
               id: "orders/delivery-fbv/fulfilled/index",
               label: "상품 배송",
             },
@@ -954,6 +959,11 @@ const sidebars: SidebarsConfig = {
           label: "상담 내역",
         },
       ],
+    },
+    {
+      type: "doc",
+      id: "ai-review/index",
+      label: "AI 댓글 관리",
     },
     {
       type: "category",
