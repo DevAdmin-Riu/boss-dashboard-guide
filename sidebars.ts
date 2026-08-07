@@ -838,6 +838,11 @@ const sidebars: SidebarsConfig = {
               id: "orders/delivery-fbv/completed-b/index",
               label: "배송완료 (화물차)",
             },
+            {
+              type: "doc",
+              id: "orders/delivery-fbv/all-orders/index",
+              label: "전체 주문 내역",
+            },
           ],
         },
         {
