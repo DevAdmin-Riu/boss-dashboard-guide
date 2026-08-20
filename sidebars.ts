@@ -30,6 +30,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "reserve-variant-vendor-price/index",
+          label: "제품 가격 변경 예약",
+        },
+        {
+          type: "doc",
           id: "products/single-brand-assigned-pvs/index",
           label: "단독 판매 제품",
         },
@@ -84,6 +89,11 @@ const sidebars: SidebarsConfig = {
               label: "상품 그룹",
             },
           ],
+        },
+        {
+          type: "doc",
+          id: "reserve-brand-product-price/index",
+          label: "상품 가격 변경 예약",
         },
         {
           type: "doc",
@@ -1226,6 +1236,37 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "탄소발자국(CFP)",
+      items: [
+        {
+          type: "doc",
+          id: "cfp/ef/index",
+          label: "배출계수(EF)",
+        },
+        {
+          type: "doc",
+          id: "cfp/ratio/index",
+          label: "폐기 비율 관리",
+        },
+        {
+          type: "doc",
+          id: "vendors/makers/index",
+          label: "제조사 리스트",
+        },
+        {
+          type: "doc",
+          id: "cfp/suppliers/index",
+          label: "원재료 공급업체 리스트",
+        },
+        {
+          type: "doc",
+          id: "cfp/waste-companies/index",
+          label: "외부 폐기업체 리스트",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "협력사 관리",
       items: [
         {
@@ -1237,16 +1278,6 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "vendors/vendor-histories/index",
           label: "협력사 운영 이력",
-        },
-        {
-          type: "doc",
-          id: "vendors/makers/index",
-          label: "제조사 리스트",
-        },
-        {
-          type: "doc",
-          id: "cfp/index",
-          label: "탄소배출량 현황",
         },
       ],
     },

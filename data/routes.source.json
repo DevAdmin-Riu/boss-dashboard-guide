@@ -1,7 +1,7 @@
 {
   "__meta": {
-    "lastUpdated": "2026-08-13",
-    "lastSyncedDashboardCommit": "82379e4fedd5ed142ef219b6e977b3e0a74be568",
+    "lastUpdated": "2026-08-20",
+    "lastSyncedDashboardCommit": "a2bbac8d4eb83ff328fb21a02ef811bf459b80ee",
     "lastSyncedDashboardCommitNote": "이 가이드가 반영하고 있는 saleor-dashboard origin/master 커밋(주간 동기화 루틴의 기준점, 실서버 배포 기준). 매주 이 커밋..origin/master 범위의 변경을 가이드에 반영한 뒤 이 값을 처리한 origin/master HEAD로 갱신한다.",
     "note": "Codex로 generated/routes.json 파일을 매번 생성하면 비용/시간이 커서, routes.json 원본을 Git에 보관합니다. 서비스의 메뉴 구조가 변경되면 routes 내용에도 반영이 필요하고, 가이드 생성 시에는 필요한 path만 추려 generated/routes.json으로 복사해 사용하세요."
   },
@@ -9,6 +9,11 @@
     {
       "path": "/products/type-a",
       "menuLabel": ["제품 관리", "제품"],
+      "sidebarOrder": 1
+    },
+    {
+      "path": "/reserve-variant-vendor-price",
+      "menuLabel": ["제품 관리", "제품 가격 변경 예약"],
       "sidebarOrder": 1
     },
     {
@@ -54,6 +59,11 @@
     {
       "path": "/brand-products/bpv-collection",
       "menuLabel": ["상품 관리", "상품 리스트", "상품 그룹"],
+      "sidebarOrder": 2
+    },
+    {
+      "path": "/reserve-brand-product-price",
+      "menuLabel": ["상품 관리", "상품 가격 변경 예약"],
       "sidebarOrder": 2
     },
     {
@@ -1002,124 +1012,139 @@
       "sidebarOrder": 23
     },
     {
-      "path": "/vendors",
-      "menuLabel": ["협력사 관리", "협력사 리스트"],
+      "path": "/cfp/ef",
+      "menuLabel": ["탄소발자국(CFP)", "배출계수(EF)"],
       "sidebarOrder": 24
     },
     {
-      "path": "/vendors/vendor-histories",
-      "menuLabel": ["협력사 관리", "협력사 운영 이력"],
+      "path": "/cfp/ratio",
+      "menuLabel": ["탄소발자국(CFP)", "폐기 비율 관리"],
       "sidebarOrder": 24
     },
     {
       "path": "/vendors/makers",
-      "menuLabel": ["협력사 관리", "제조사 리스트"],
+      "menuLabel": ["탄소발자국(CFP)", "제조사 리스트"],
       "sidebarOrder": 24
     },
     {
-      "path": "/cfp",
-      "menuLabel": ["협력사 관리", "탄소배출량 현황"],
+      "path": "/cfp/suppliers",
+      "menuLabel": ["탄소발자국(CFP)", "원재료 공급업체 리스트"],
       "sidebarOrder": 24
+    },
+    {
+      "path": "/cfp/waste-companies",
+      "menuLabel": ["탄소발자국(CFP)", "외부 폐기업체 리스트"],
+      "sidebarOrder": 24
+    },
+    {
+      "path": "/vendors",
+      "menuLabel": ["협력사 관리", "협력사 리스트"],
+      "sidebarOrder": 25
+    },
+    {
+      "path": "/vendors/vendor-histories",
+      "menuLabel": ["협력사 관리", "협력사 운영 이력"],
+      "sidebarOrder": 25
     },
     {
       "path": "/customer-qa/suggest-system",
       "menuLabel": ["고객 문의 관리", "시스템 개선 제안"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/customer-qa/boss-qa",
       "menuLabel": ["고객 문의 관리", "포장보스 문의"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/claims",
       "menuLabel": ["고객 문의 관리", "클레임 보상 내역"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/requested",
       "menuLabel": ["고객 문의 관리", "신규 교환/반품/기타문의"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/accepted",
       "menuLabel": ["고객 문의 관리", "교환/반품/기타문의 접수"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/reject",
       "menuLabel": ["고객 문의 관리", "교환/반품/기타문의 반려"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/change-pending",
       "menuLabel": ["고객 문의 관리", "교환 대기"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/change-success",
       "menuLabel": ["고객 문의 관리", "교환 확정"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/collected-inspect",
       "menuLabel": ["고객 문의 관리", "반품 회수 및 검수"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/refund-pending",
       "menuLabel": ["고객 문의 관리", "반품 환불 대기"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/refund-success",
       "menuLabel": ["고객 문의 관리", "반품 환불 완료"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/stock-included-requested",
       "menuLabel": ["고객 문의 관리", "반품 재고 재포함"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/refund-question/boss/all",
       "menuLabel": ["고객 문의 관리", "전체 주문 문의"],
-      "sidebarOrder": 25
+      "sidebarOrder": 26
     },
     {
       "path": "/notices/boss-to-hq",
       "menuLabel": ["커뮤니케이션", "포장보스 공지사항", "포장보스 → 가맹본부 공지"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     },
     {
       "path": "/notices/boss-to-user",
       "menuLabel": ["커뮤니케이션", "포장보스 공지사항", "포장보스 → 매장 공지"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     },
     {
       "path": "/banners",
       "menuLabel": ["커뮤니케이션", "포장보스 배너", "배너 관리"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     },
     {
       "path": "/admin-banners",
       "menuLabel": ["커뮤니케이션", "포장보스 배너", "Admin 배너"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     },
     {
       "path": "/hq-popups",
       "menuLabel": ["커뮤니케이션", "포장보스 팝업", "포장보스 → 가맹본부 팝업 관리"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     },
     {
       "path": "/popups",
       "menuLabel": ["커뮤니케이션", "포장보스 팝업", "포장보스 → 매장 팝업 관리"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     },
     {
       "path": "/admin-popups",
       "menuLabel": ["커뮤니케이션", "포장보스 팝업", "Admin 팝업"],
-      "sidebarOrder": 26
+      "sidebarOrder": 27
     }
   ]
 }
