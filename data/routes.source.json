@@ -1,9 +1,9 @@
 {
   "__meta": {
-    "lastUpdated": "2026-08-20",
-    "lastSyncedDashboardCommit": "a2bbac8d4eb83ff328fb21a02ef811bf459b80ee",
+    "lastUpdated": "2026-09-03",
+    "lastSyncedDashboardCommit": "352bed362b590a522e870e5127858ff959ceca52",
     "lastSyncedDashboardCommitNote": "이 가이드가 반영하고 있는 saleor-dashboard origin/master 커밋(주간 동기화 루틴의 기준점, 실서버 배포 기준). 매주 이 커밋..origin/master 범위의 변경을 가이드에 반영한 뒤 이 값을 처리한 origin/master HEAD로 갱신한다.",
-    "note": "Codex로 generated/routes.json 파일을 매번 생성하면 비용/시간이 커서, routes.json 원본을 Git에 보관합니다. 서비스의 메뉴 구조가 변경되면 routes 내용에도 반영이 필요하고, 가이드 생성 시에는 필요한 path만 추려 generated/routes.json으로 복사해 사용하세요."
+    "note": "서비스 메뉴/URL 구조의 원본 데이터. 주간 자동 동기화 루틴이 saleor-dashboard origin/master의 메뉴 구조와 대조하여 갱신한다."
   },
   "routes": [
     {
@@ -922,6 +922,11 @@
       "sidebarOrder": 21
     },
     {
+      "path": "/b2b/settlement/consolidated-statement",
+      "menuLabel": ["B2B", "매출 정산", "월 마감 거래명세서 내역"],
+      "sidebarOrder": 21
+    },
+    {
       "path": "/b2b/settlement/all",
       "menuLabel": ["B2B", "매출 정산", "전체 매출 내역"],
       "sidebarOrder": 21
@@ -1047,8 +1052,8 @@
       "sidebarOrder": 25
     },
     {
-      "path": "/customer-qa/suggest-system",
-      "menuLabel": ["고객 문의 관리", "시스템 개선 제안"],
+      "path": "/lowest-price-requests",
+      "menuLabel": ["고객 문의 관리", "최저가 비교 요청"],
       "sidebarOrder": 26
     },
     {
@@ -1057,8 +1062,28 @@
       "sidebarOrder": 26
     },
     {
-      "path": "/claims",
-      "menuLabel": ["고객 문의 관리", "클레임 보상 내역"],
+      "path": "/claims/received",
+      "menuLabel": ["고객 문의 관리", "클레임 보상 내역", "클레임 접수"],
+      "sidebarOrder": 26
+    },
+    {
+      "path": "/claims/in-progress",
+      "menuLabel": ["고객 문의 관리", "클레임 보상 내역", "합의중"],
+      "sidebarOrder": 26
+    },
+    {
+      "path": "/claims/settled",
+      "menuLabel": ["고객 문의 관리", "클레임 보상 내역", "합의 완료"],
+      "sidebarOrder": 26
+    },
+    {
+      "path": "/claims/compensated",
+      "menuLabel": ["고객 문의 관리", "클레임 보상 내역", "처리 완료"],
+      "sidebarOrder": 26
+    },
+    {
+      "path": "/claims/all",
+      "menuLabel": ["고객 문의 관리", "클레임 보상 내역", "전체 보상 내역"],
       "sidebarOrder": 26
     },
     {

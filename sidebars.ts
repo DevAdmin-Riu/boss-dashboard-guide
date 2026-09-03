@@ -1115,6 +1115,11 @@ const sidebars: SidebarsConfig = {
               id: "b2b/settlement/closed/index",
               label: "매출 정산 완료(발행성공)",
             },
+            {
+              type: "doc",
+              id: "b2b/settlement/consolidated-statement/index",
+              label: "월 마감 거래명세서 내역",
+            },
           ],
         },
         {
@@ -1287,8 +1292,8 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "customer-qa/suggest-system/index",
-          label: "시스템 개선 제안",
+          id: "lowest-price-requests/index",
+          label: "최저가 비교 요청",
         },
         {
           type: "doc",
@@ -1296,9 +1301,35 @@ const sidebars: SidebarsConfig = {
           label: "포장보스 문의",
         },
         {
-          type: "doc",
-          id: "claims/index",
+          type: "category",
           label: "클레임 보상 내역",
+          items: [
+            {
+              type: "doc",
+              id: "claims/received/index",
+              label: "클레임 접수",
+            },
+            {
+              type: "doc",
+              id: "claims/in-progress/index",
+              label: "합의중",
+            },
+            {
+              type: "doc",
+              id: "claims/settled/index",
+              label: "합의 완료",
+            },
+            {
+              type: "doc",
+              id: "claims/compensated/index",
+              label: "처리 완료",
+            },
+            {
+              type: "doc",
+              id: "claims/all/index",
+              label: "전체 보상 내역",
+            },
+          ],
         },
         {
           type: "doc",
