@@ -1,7 +1,7 @@
 {
   "__meta": {
-    "lastUpdated": "2026-09-03",
-    "lastSyncedDashboardCommit": "352bed362b590a522e870e5127858ff959ceca52",
+    "lastUpdated": "2026-09-09",
+    "lastSyncedDashboardCommit": "a471706fdbb93e8c28467de59b7bbad1b87a41c4",
     "lastSyncedDashboardCommitNote": "이 가이드가 반영하고 있는 saleor-dashboard origin/master 커밋(주간 동기화 루틴의 기준점, 실서버 배포 기준). 매주 이 커밋..origin/master 범위의 변경을 가이드에 반영한 뒤 이 값을 처리한 origin/master HEAD로 갱신한다.",
     "note": "서비스 메뉴/URL 구조의 원본 데이터. 주간 자동 동기화 루틴이 saleor-dashboard origin/master의 메뉴 구조와 대조하여 갱신한다."
   },
