@@ -978,7 +978,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "ai-review/index",
-      label: "AI 댓글 관리",
+      label: "댓글친구",
     },
     {
       type: "category",
@@ -1210,6 +1210,11 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "brand-stores/index",
           label: "매장 리스트",
+        },
+        {
+          type: "doc",
+          id: "brand-store-histories/index",
+          label: "매장 관리 이력",
         },
         {
           type: "doc",
